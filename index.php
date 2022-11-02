@@ -15,15 +15,15 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="Views/css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="Views/css/style.css">
       <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="Views/css/responsive.css">
       <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <link rel="icon" href="Views/images/fevicon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="Views/css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
@@ -35,7 +35,7 @@
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+         <div class="loader"><img src="Views/images/loading.gif" alt="#" /></div>
       </div>
       <!-- end loader -->
       <!-- header -->
@@ -61,22 +61,22 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item active">
-                                 <a class="nav-link" href="index.html">Home</a>
+                                 <a class="nav-link" href="index.php">Home</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="about.html">About</a>
+                                 <a class="nav-link" href="Views/about.php">About</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="computer.html">Computer</a>
+                                 <a class="nav-link" href="Views/computer.php">Computer</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="laptop.html">Laptop</a>
+                                 <a class="nav-link" href="Views/laptop.php">Laptop</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="product.html">Products</a>
+                                 <a class="nav-link" href="Views/product.php">Products</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="contact.html">Contact Us</a>
+                                 <a class="nav-link" href="Views/contact.php">Contact Us</a>
                               </li>
                               <li class="nav-item d_none">
                                  <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
@@ -114,12 +114,12 @@
                                  <span>Computer And Laptop</span>
                                  <h1>Accessories</h1>
                                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                                 <a href="#">Buy Now </a> <a href="contact.html">Contact </a>
+                                 <a href="#">Buy Now </a> <a href="Views/contact.php">Contact </a>
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="text_img">
-                                 <figure><img src="images/pct.png" alt="#"/></figure>
+                                 <figure><img src="Views/images/pct.png" alt="#"/></figure>
                               </div>
                            </div>
                         </div>
@@ -135,12 +135,12 @@
                                  <span>Computer And Laptop</span>
                                  <h1>Accessories</h1>
                                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                                 <a href="#">Buy Now </a> <a href="contact.html">Contact </a>
+                                 <a href="#">Buy Now </a> <a href="Views/contact.php">Contact </a>
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="text_img">
-                                 <figure><img src="images/pct.png" alt="#"/></figure>
+                                 <figure><img src="Views/images/pct.png" alt="#"/></figure>
                               </div>
                            </div>
                         </div>
@@ -156,12 +156,12 @@
                                  <span>Computer And Laptop</span>
                                  <h1>Accessories</h1>
                                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                                 <a href="#">Buy Now </a> <a href="contact.html">Contact </a>
+                                 <a href="#">Buy Now </a> <a href="Views/contact.php">Contact </a>
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="text_img">
-                                 <figure><img src="images/pct.png" alt="#"/></figure>
+                                 <figure><img src="Views/images/pct.png" alt="#"/></figure>
                               </div>
                            </div>
                         </div>
@@ -177,12 +177,12 @@
                                  <span>Computer And Laptop</span>
                                  <h1>Accessories</h1>
                                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                                 <a href="#">Buy Now </a> <a href="contact.html">Contact </a>
+                                 <a href="#">Buy Now </a> <a href="Views/contact.php">Contact </a>
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="text_img">
-                                 <figure><img src="images/pct.png" alt="#"/></figure>
+                                 <figure><img src="Views/images/pct.png" alt="#"/></figure>
                               </div>
                            </div>
                         </div>
@@ -198,12 +198,12 @@
                                  <span>Computer And Laptop</span>
                                  <h1>Accessories</h1>
                                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                                 <a href="#">Buy Now </a> <a href="contact.html">Contact </a>
+                                 <a href="#">Buy Now </a> <a href="Views/contact.php">Contact </a>
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="text_img">
-                                 <figure><img src="images/pct.png" alt="#"/></figure>
+                                 <figure><img src="Views/images/pct.png" alt="#"/></figure>
                               </div>
                            </div>
                         </div>
@@ -226,21 +226,21 @@
             <div class="row">
                <div class="col-md-4">
                   <div class="box_text">
-                     <i><img src="images/thr.png" alt="#"/></i>
+                     <i><img src="Views/images/thr.png" alt="#"/></i>
                      <h3>Computer</h3>
                      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
                   </div>
                </div>
                <div class="col-md-4">
                   <div class="box_text">
-                     <i><img src="images/thr1.png" alt="#"/></i>
+                     <i><img src="Views/images/thr1.png" alt="#"/></i>
                      <h3>Laptop</h3>
                      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
                   </div>
                </div>
                <div class="col-md-4">
                   <div class="box_text">
-                     <i><img src="images/thr2.png" alt="#"/></i>
+                     <i><img src="Views/images/thr2.png" alt="#"/></i>
                      <h3>Tablet</h3>
                      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
                   </div>
@@ -265,55 +265,55 @@
                      <div class="row">
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product1.png" alt="#"/></figure>
+                              <figure><img src="Views/images/product1.png" alt="#"/></figure>
                               <h3>Computer</h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product2.png" alt="#"/></figure>
+                              <figure><img src="Views/images/product2.png" alt="#"/></figure>
                               <h3>Laptop</h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product3.png" alt="#"/></figure>
+                              <figure><img src="Views/images/product3.png" alt="#"/></figure>
                               <h3>Tablet</h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product4.png" alt="#"/></figure>
+                              <figure><img src="Views/images/product4.png" alt="#"/></figure>
                               <h3>Speakers</h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product5.png" alt="#"/></figure>
+                              <figure><img src="Views/images/product5.png" alt="#"/></figure>
                               <h3>internet</h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product6.png" alt="#"/></figure>
+                              <figure><img src="Views/images/product6.png" alt="#"/></figure>
                               <h3>Hardisk</h3>
                            </div>
                         </div>
                         <div class="col-md-4">
                            <div class="product_box">
-                              <figure><img src="images/product7.png" alt="#"/></figure>
+                              <figure><img src="Views/images/product7.png" alt="#"/></figure>
                               <h3>Rams</h3>
                            </div>
                         </div>
                         <div class="col-md-4">
                            <div class="product_box">
-                              <figure><img src="images/product8.png" alt="#"/></figure>
+                              <figure><img src="Views/images/product8.png" alt="#"/></figure>
                               <h3>Bettery</h3>
                            </div>
                         </div>
                         <div class="col-md-4">
                            <div class="product_box">
-                              <figure><img src="images/product9.png" alt="#"/></figure>
+                              <figure><img src="Views/images/product9.png" alt="#"/></figure>
                               <h3>Drive</h3>
                            </div>
                         </div>
@@ -340,7 +340,7 @@
                </div>
                <div class="col-md-6">
                   <div class="laptop_box">
-                     <figure><img src="images/pc.png" alt="#"/></figure>
+                     <figure><img src="Views/images/pc.png" alt="#"/></figure>
                   </div>
                </div>
             </div>
@@ -373,7 +373,7 @@
                                  <div class="row">
                                     <div class="col-md-9 offset-md-3">
                                        <div class="test_box">
-                                          <i><img src="images/cos.png" alt="#"/></i>
+                                          <i><img src="Views/images/cos.png" alt="#"/></i>
                                           <h4>Sandy Miller</h4>
                                           <p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id</p>
                                        </div>
@@ -388,7 +388,7 @@
                                  <div class="row">
                                     <div class="col-md-9 offset-md-3">
                                        <div class="test_box">
-                                          <i><img src="images/cos.png" alt="#"/></i>
+                                          <i><img src="Views/images/cos.png" alt="#"/></i>
                                           <h4>Sandy Miller</h4>
                                           <p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id</p>
                                        </div>
@@ -403,7 +403,7 @@
                                  <div class="row">
                                     <div class="col-md-9 offset-md-3">
                                        <div class="test_box">
-                                          <i><img src="images/cos.png" alt="#"/></i>
+                                          <i><img src="Views/images/cos.png" alt="#"/></i>
                                           <h4>Sandy Miller</h4>
                                           <p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id</p>
                                        </div>
@@ -512,13 +512,13 @@
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="Views/js/jquery.min.js"></script>
+      <script src="Views/js/popper.min.js"></script>
+      <script src="Views/js/bootstrap.bundle.min.js"></script>
+      <script src="Views/js/jquery-3.0.0.min.js"></script>
       <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
+      <script src="Views/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="Views/js/custom.js"></script>
    </body>
 </html>
 
