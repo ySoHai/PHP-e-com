@@ -5,7 +5,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Our Products</h2>
+                     <h2>Listings</h2>
                   </div>
                </div>
             </div>
@@ -68,7 +68,7 @@
                            </div>
                         </div>
                         <div class="col-md-12">
-                           <a class="read_more" href="#">See More</a>
+                           <a class="read_more" href="#">Load More</a>
                         </div>
                      </div>
                   </div>

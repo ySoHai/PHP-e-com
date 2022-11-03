@@ -6,8 +6,8 @@
                <div class="col-md-5">
                   <div class="titlepage">
                      <h2>About Us</h2>
-                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                     <a class="read_more" href="#">Read More</a>
+                     <p>Website of a Advanced Web Development Project.</p>
+                     <a class="read_more" href="product.php">Show Listings</a>
                   </div>
                </div>
                <div class="col-md-7">

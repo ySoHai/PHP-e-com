@@ -58,29 +58,23 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
-                              <li class="nav-item active">
-                                 <a class="nav-link" href="../index.php">Home</a>
+                              <li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=='index.php') echo 'active';?>">
+                                 <a class="nav-link" href="index.php">Home</a>
                               </li>
-                              <li class="nav-item">
+                              <li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=='about.php') echo 'active';?>">
                                  <a class="nav-link" href="about.php">About</a>
                               </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="computer.php">Computer</a>
+                              <li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=='product.php') echo 'active';?>">
+                                 <a class="nav-link" href="product.php">Listings</a>
                               </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="laptop.php">Laptop</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="product.php">Products</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="contact.php">Contact Us</a>
+                              <li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=='contact.php') echo 'active';?>">
+                                 <a class="nav-link" href="contact.php">Contact</a>
                               </li>
                               <li class="nav-item d_none">
                                  <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                               </li>
                               <li class="nav-item d_none">
-                                 <a class="nav-link" href="#">Login</a>
+                                 <a class="nav-link" href="#">LOGIN</a>
                               </li>
                            </ul>
                         </div>

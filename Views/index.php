@@ -5,9 +5,6 @@
             <ol class="carousel-indicators">
                <li data-target="#banner1" data-slide-to="0" class="active"></li>
                <li data-target="#banner1" data-slide-to="1"></li>
-               <li data-target="#banner1" data-slide-to="2"></li>
-               <li data-target="#banner1" data-slide-to="3"></li>
-               <li data-target="#banner1" data-slide-to="4"></li>
             </ol>
             <div class="carousel-inner">
                <div class="carousel-item active">
@@ -16,10 +13,10 @@
                         <div class="row">
                            <div class="col-md-6">
                               <div class="text-bg">
-                                 <span>Computer And Laptop</span>
-                                 <h1>Accessories</h1>
-                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                                 <a href="#">Buy Now </a> <a href="contact.php">Contact </a>
+                                 <span>TechTrade</span>
+                                 <h1>Sell</h1>
+                                 <p>Sell new and used items that you do not need anymore!</p>
+                                 <a href="account.php">My account</a>
                               </div>
                            </div>
                            <div class="col-md-6">
@@ -37,73 +34,10 @@
                         <div class="row">
                            <div class="col-md-6">
                               <div class="text-bg">
-                                 <span>Computer And Laptop</span>
-                                 <h1>Accessories</h1>
-                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                                 <a href="#">Buy Now </a> <a href="contact.php">Contact </a>
-                              </div>
-                           </div>
-                           <div class="col-md-6">
-                              <div class="text_img">
-                                 <figure><img src="images/pct.png" alt="#"/></figure>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="row">
-                           <div class="col-md-6">
-                              <div class="text-bg">
-                                 <span>Computer And Laptop</span>
-                                 <h1>Accessories</h1>
-                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                                 <a href="#">Buy Now </a> <a href="contact.php">Contact </a>
-                              </div>
-                           </div>
-                           <div class="col-md-6">
-                              <div class="text_img">
-                                 <figure><img src="images/pct.png" alt="#"/></figure>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="row">
-                           <div class="col-md-6">
-                              <div class="text-bg">
-                                 <span>Computer And Laptop</span>
-                                 <h1>Accessories</h1>
-                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                                 <a href="#">Buy Now </a> <a href="contact.php">Contact </a>
-                              </div>
-                           </div>
-                           <div class="col-md-6">
-                              <div class="text_img">
-                                 <figure><img src="images/pct.png" alt="#"/></figure>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="row">
-                           <div class="col-md-6">
-                              <div class="text-bg">
-                                 <span>Computer And Laptop</span>
-                                 <h1>Accessories</h1>
-                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                                 <a href="#">Buy Now </a> <a href="contact.php">Contact </a>
+                                 <span>TechTrade</span>
+                                 <h1>Buy</h1>
+                                 <p>Get great items for the best price!</p>
+                                 <a href="product.php">Login</a>
                               </div>
                            </div>
                            <div class="col-md-6">
@@ -129,25 +63,18 @@
       <div class="three_box">
          <div class="container">
             <div class="row">
-               <div class="col-md-4">
+               <div class="col-md-6">
                   <div class="box_text">
                      <i><img src="images/thr.png" alt="#"/></i>
-                     <h3>Computer</h3>
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                     <h3>Sell</h3>
+                     <p>Sell new and used items that you do not need anymore!</p>
                   </div>
                </div>
-               <div class="col-md-4">
-                  <div class="box_text">
-                     <i><img src="images/thr1.png" alt="#"/></i>
-                     <h3>Laptop</h3>
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-                  </div>
-               </div>
-               <div class="col-md-4">
+               <div class="col-md-6">
                   <div class="box_text">
                      <i><img src="images/thr2.png" alt="#"/></i>
-                     <h3>Tablet</h3>
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                     <h3>Buy</h3>
+                     <p>Get great items for the best price!</p>
                   </div>
                </div>
             </div>
@@ -160,7 +87,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Our Products</h2>
+                     <h2>Categories</h2>
                   </div>
                </div>
             </div>
@@ -222,9 +149,6 @@
                               <h3>Drive</h3>
                            </div>
                         </div>
-                        <div class="col-md-12">
-                           <a class="read_more" href="#">See More</a>
-                        </div>
                      </div>
                   </div>
                </div>
@@ -238,9 +162,9 @@
             <div class="row">
                <div class="col-md-6">
                   <div class="titlepage">
-                     <p>Every Computer and laptop</p>
-                     <h2>Up to 40% off !</h2>
-                     <a class="read_more" href="#">Shop Now</a>
+                     <p>List your own items</p>
+                     <h2>for FREE !</h2>
+                     <a class="read_more" href="#">Add Listing</a>
                   </div>
                </div>
                <div class="col-md-6">
@@ -339,7 +263,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Contact Now</h2>
+                     <h2>Contact</h2>
                   </div>
                </div>
             </div>
