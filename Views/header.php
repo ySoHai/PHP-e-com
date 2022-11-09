@@ -83,6 +83,9 @@ error_reporting(E_ALL);
                               <li class="nav-item d_none">
                                  <a class="nav-link" href="login.php">LOGIN</a>
                               </li>
+                              <li class="nav-item d_none">
+                                 <a class="nav-link" href="signup.php">SIGN UP</a>
+                              </li>
                            </ul>
                         </div>
                      </nav>
