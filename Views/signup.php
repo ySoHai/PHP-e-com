@@ -20,7 +20,7 @@
                            <input class="contactus" placeholder="Enter Password" type="password" name="password"> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Confirm Password" type="password" name="confirmpassword"> 
+                           <input class="contactus" placeholder="Confirm Password" type="password" name="confirmPassword"> 
                         </div>
                         <div class="col-md-12">
                            <button class="send_btn">Sign Up</button>
