@@ -3,6 +3,10 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
+$uri = filter_input(INPUT_SERVER, 'REQUEST_URI');
+$dirs = explode('/', $uri);
+$app_path = '/' . $dirs[1] . '/' . $dirs[2] . '/Views/';
 ?>
 
 <!DOCTYPE html>
@@ -20,15 +24,15 @@ error_reporting(E_ALL);
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="<?php echo $app_path; ?>css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="<?php echo $app_path; ?>css/style.css">
       <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="<?php echo $app_path; ?>css/responsive.css">
       <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <link rel="icon" href="<?php echo $app_path; ?>images/fevicon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="<?php echo $app_path; ?>css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
@@ -40,7 +44,7 @@ error_reporting(E_ALL);
    <body class="main-layout inner_posituong computer_page">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+         <div class="loader"><img src="<?php echo $app_path; ?>images/loading.gif" alt="#" /></div>
       </div>
       <!-- end loader -->
       <!-- header -->
