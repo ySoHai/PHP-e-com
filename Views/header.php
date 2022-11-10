@@ -1,3 +1,10 @@
+<?php
+//Display error codes
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,7 +81,10 @@
                                  <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                               </li>
                               <li class="nav-item d_none">
-                                 <a class="nav-link" href="#">LOGIN</a>
+                                 <a class="nav-link" href="login.php">LOGIN</a>
+                              </li>
+                              <li class="nav-item d_none">
+                                 <a class="nav-link" href="signup.php">SIGN UP</a>
                               </li>
                            </ul>
                         </div>
