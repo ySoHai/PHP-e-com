@@ -14,7 +14,16 @@
                   <form id="request" class="main_form">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Enter Email" type="type" name="Email"> 
+                           <input class="contactus" placeholder="Enter Email" type="type" name="email"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Enter Phone Number" type="type" name="phoneNumber"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Enter First Name" type="type" name="firstName"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Enter Last Name" type="type" name="lastName"> 
                         </div>
                         <div class="col-md-12">
                            <input class="contactus" placeholder="Enter Password" type="password" name="password"> 

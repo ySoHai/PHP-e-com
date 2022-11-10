@@ -22,11 +22,6 @@
                         <div class="col-md-12">
                            <button class="send_btn">Login</button>
                         </div>
-                        <ul class="navbar-nav mr-auto">
-                           <li class="nav-item">
-                              <a class="nav-link" href="signup.php">Sign up</a>
-                           </li>
-                        </ul>
                      </div>
                   </form>
                </div>
