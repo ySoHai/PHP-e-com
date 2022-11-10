@@ -1,6 +1,6 @@
 <?php require_once('header.php'); ?>
       <!--  login -->
-      <div class="login">
+      <div class="contact">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
