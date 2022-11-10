@@ -1,3 +1,8 @@
+<?php
+$uri = filter_input(INPUT_SERVER, 'REQUEST_URI');
+$dirs = explode('/', $uri);
+$app_path = '/' . $dirs[1] . '/' . $dirs[2] . '/Views/';
+?>
     <!--  footer -->
     <footer>
         <div class="footer">
@@ -40,13 +45,13 @@
     </footer>
     <!-- end footer -->
     <!-- Javascript files-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="<?php echo $app_path; ?>js/jquery.min.js"></script>
+    <script src="<?php echo $app_path; ?>js/popper.min.js"></script>
+    <script src="<?php echo $app_path; ?>js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo $app_path; ?>js/jquery-3.0.0.min.js"></script>
     <!-- sidebar -->
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="<?php echo $app_path; ?>js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="<?php echo $app_path; ?>js/custom.js"></script>
 </body>
 </html>
 
