@@ -4,9 +4,10 @@ require_once('../Models/database.php');
 require_once('../Models/user_db.php');
 
 if (validateLogin($_POST['email'], $_POST['password'])) {
-	echo 'OK';
+	include_once("Location: ../Views/index.php");
 }
 else {
-	echo 'NO';
+	$error_login = 'Invalid!';
+	include_once("Location: ../Views/login.php");
 }
 ?>
