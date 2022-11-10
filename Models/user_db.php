@@ -1,23 +1,46 @@
 <?php
-    function get_user_emails() {
-        global $db;
-        $query = 'SELECT email FROM users
-                  ORDER BY userID';
-        $statement = $db->prepare($query);
-        $statement->execute();
-        return $statement;
+    function validateLogin($email, $password) {
+        $db = Database::getDB();
+        $query = 'SELECT password FROM users
+                    WHERE email = :email';
+        try {
+            $statement = $db->prepare($query);
+            $statement->bindValue(':email', $email);
+            $statement->execute();
+            $pword = $statement->fetch();
+            $statement->closeCursor();
+            
+            if(in_array($password, $pword)){
+                return true;
+            } else {
+                return false;
+            }
+            
+        } catch (PDOException $e) {
+            Database::displayError($e->getMessage());
+        }
+        
     }
     
-    function get_user_pass($user) {
-        global $db;
-        $query = 'SELECT password FROM users
-                  WHERE email = :email';
-        $statement = $db->prepare($query);
-        $statement->bindValue(':email', $user);
-        $statement->execute();    
-        $password = $statement->fetch();
-        $statement->closeCursor();    
-        $user_pass = $password['password'];
-        return $user_pass;
+    function registerUser($email,$pnum,$address,$fname,$lname,$password) {
+        $db = Database::getDB();
+        $query = 'INSERT into users 
+                    (email,phone,address,name_first,name_last,password)
+                  VALUES
+                    (:email,:phone,:address,:fname,:lname,:password)';
+        try {
+            $statement = $db->prepare($query);
+            $statement->bindValue(':email', $email);
+            $statement->bindValue(':phone', $pnum);
+            $statement->bindValue(':address', $address);
+            $statement->bindValue(':fname', $fname);
+            $statement->bindValue(':lname', $lname);
+            $statement->bindValue(':password', $password);
+            $statement->execute();
+            $statement->closeCursor();
+            
+        } catch (PDOException $e) {
+            Database::displayError($e->getMessage());
+        }
     }
 ?>

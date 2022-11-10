@@ -11,7 +11,7 @@
             </div>
             <div class="row">
                <div class="col-md-10 offset-md-1">
-                  <form id="request" class="main_form" method="post" action="../Controllers/test.php">
+                  <form id="request" class="main_form" method="post" action="../Controllers/signup.php">
                      <div class="row">
                         <div class="col-md-12 ">
                            <input class="contactus" placeholder="Enter Email" type="email" name="email" required> 
