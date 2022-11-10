@@ -50,10 +50,10 @@ CREATE TABLE products (
 	FOREIGN KEY (sellerID) REFERENCES users (userID)
 );
 
-INSERT INTO `products` (`productID`, `name`, `description`, `price`, `quantity`, `new`, `ship_days`, `categoryID`, `sellerID`) VALUES
-(1, 'Apple iPad 10.9 64GB with Wi-Fi 6 (10th Generation) - Silve', 'The Apple iPad 10th Generation is colourfully reimagined to be more capable, more intuitive, and even more fun. With a new all‑screen design, 10.9-inch Liquid Retina display, and four gorgeous colours, iPad delivers a powerful way to get things done, create, and stay connected. Add on essential accessories designed just for iPad and enjoy endless versatility for everything you love to do.', '600.00', 20, 1, 3, 6, 1),
+INSERT INTO `products` (`productID`, `name`, `description`, `price`, `quantity`, `quality_new`, `ship_days`, `categoryID`, `sellerID`) VALUES
+(1, 'Apple iPad 10.9 64GB with Wi-Fi 6 (10th Generation) - Silve', 'The Apple iPad 10th Generation is colourfully reimagined to be more capable, more intuitive, and even more fun.', '600.00', 20, 1, 3, 6, 1),
 (2, 'Apple iPhone 14 Pro 128GB - Space Black', 'Experience iPhone in a whole new way with the iPhone 14 Pro.', '450.00', 2, 0, 5, 1, 2),
-(3, 'Razer Viper 8KHz 20000 DPI Optical Gaming Mouse - Black', 'With high performance hardware in a sleek build, the Razer Viper optical gaming mouse introduces a whole new level of navigation and control. It features a 20000DPI optical sensor that tracks even the smallest movements on almost all kinds of surfaces. This wired mouse offers plenty of flexibility with 8 programmable buttons and 5 memory profiles.', '90.00', 0, 0, 8, 4, 1);
+(3, 'Razer Viper 8KHz 20000 DPI Optical Gaming Mouse - Black', 'With high performance hardware in a ...', '90.00', 0, 0, 8, 4, 1);
 
 CREATE TABLE orders (
     orderID     INT             NOT NULL    AUTO_INCREMENT,
