@@ -1,6 +1,6 @@
 <?php require_once('header.php'); ?>
-      <!--  contact -->
-      <div class="contact">
+      <!--  signup -->
+      <div class="signup">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
@@ -11,7 +11,7 @@
             </div>
             <div class="row">
                <div class="col-md-10 offset-md-1">
-                  <form id="request" class="main_form">
+                  <form id="request" class="main_form" method="post" action="">
                      <div class="row">
                         <div class="col-md-12 ">
                            <input class="contactus" placeholder="Enter Email" type="email" name="email" required> 
@@ -43,5 +43,5 @@
             </div>
          </div>
       </div>
-      <!-- end contact -->
+      <!-- end signup -->
 <?php require_once('footer.php'); ?>
