@@ -1,7 +1,7 @@
 <?php
 
 function get_products() {
-    global $db;
+    $db = Database::getDB();
     $query = 'SELECT * FROM products
               ORDER BY productID';
     $statement = $db->prepare($query);
@@ -10,7 +10,7 @@ function get_products() {
 }
 
 function get_products_by_category($category_id) {
-    global $db;
+    $db = Database::getDB();
     $query = 'SELECT * FROM products
               WHERE products.categoryID = :category_id
               ORDER BY productID';
@@ -23,7 +23,7 @@ function get_products_by_category($category_id) {
 }
 
 function get_product_by_id($product_id) {
-    global $db;
+    $db = Database::getDB();
     $query = 'SELECT * FROM products
               WHERE productID = :product_id';
     $statement = $db->prepare($query);
@@ -35,7 +35,7 @@ function get_product_by_id($product_id) {
 }
 
 function get_products_by_name($product_name) {
-    global $db;
+    $db = Database::getDB();
     $query = 'SELECT * FROM products
               WHERE name = :product_name';
     $statement = $db->prepare($query);
@@ -46,12 +46,12 @@ function get_products_by_name($product_name) {
     return $products;
 }
 
-function add_product($category_id, $seller_id, $name, $description, $price, $quantity, $ship_days) {
-    global $db;
+function add_product($category_id, $seller_id, $name, $description, $price, $quantity, $ship_days, $quality) {
+    $db = Database::getDB();
     $query = 'INSERT INTO products
-                 (categoryID, sellerID, name, description, price, quantity, ship_days)
+                 (name, description, price, quantity, quality_new, ship_days, categoryID, sellerID)
               VALUES
-                 (:category_id, :seller_id, :name, :description, :price, :quantity, :ship_days)';
+                 (:name, :description, :price, :quantity, :quality_new, :ship_days, :category_id, :seller_id)';
     $statement = $db->prepare($query);
     $statement->bindValue(':category_id', $category_id);
     $statement->bindValue(':seller_id', $seller_id);
@@ -60,12 +60,13 @@ function add_product($category_id, $seller_id, $name, $description, $price, $qua
     $statement->bindValue(':price', $price);
     $statement->bindValue(':quantity', $quantity);
     $statement->bindValue(':ship_days', $ship_days);
+    $statement->bindValue(':quality_new', $quality);
     $statement->execute();
     $statement->closeCursor();
 }
 
 function delete_product($product_id) {
-    global $db;
+    $db = Database::getDB();
     $query = 'DELETE FROM products
               WHERE productID = :product_id';
     $statement = $db->prepare($query);
