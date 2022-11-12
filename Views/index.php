@@ -21,7 +21,7 @@
                            </div>
                            <div class="col-md-6">
                               <div class="text_img">
-                                 <figure><img src="images/pct.png" alt="#"/></figure>
+                                 <figure><img src="<?php echo $app_path; ?>images/pct.png" alt="#"/></figure>
                               </div>
                            </div>
                         </div>
@@ -42,7 +42,7 @@
                            </div>
                            <div class="col-md-6">
                               <div class="text_img">
-                                 <figure><img src="images/pct.png" alt="#"/></figure>
+                                 <figure><img src="<?php echo $app_path; ?>images/pct.png" alt="#"/></figure>
                               </div>
                            </div>
                         </div>
@@ -65,14 +65,14 @@
             <div class="row">
                <div class="col-md-6">
                   <div class="box_text">
-                     <i><img src="images/thr.png" alt="#"/></i>
+                     <i><img src="<?php echo $app_path; ?>images/thr.png" alt="#"/></i>
                      <h3>Sell</h3>
                      <p>Sell new and used items that you do not need anymore!</p>
                   </div>
                </div>
                <div class="col-md-6">
                   <div class="box_text">
-                     <i><img src="images/thr2.png" alt="#"/></i>
+                     <i><img src="<?php echo $app_path; ?>images/thr2.png" alt="#"/></i>
                      <h3>Buy</h3>
                      <p>Get great items for the best price!</p>
                   </div>
@@ -97,55 +97,55 @@
                      <div class="row">
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product1.png" alt="#"/></figure>
+                              <figure><img src="<?php echo $app_path; ?>images/product1.png" alt="#"/></figure>
                               <h3>Computer</h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product2.png" alt="#"/></figure>
+                              <figure><img src="<?php echo $app_path; ?>images/product2.png" alt="#"/></figure>
                               <h3>Laptop</h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product3.png" alt="#"/></figure>
+                              <figure><img src="<?php echo $app_path; ?>images/product3.png" alt="#"/></figure>
                               <h3>Tablet</h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product4.png" alt="#"/></figure>
+                              <figure><img src="<?php echo $app_path; ?>images/product4.png" alt="#"/></figure>
                               <h3>Speakers</h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product5.png" alt="#"/></figure>
+                              <figure><img src="<?php echo $app_path; ?>images/product5.png" alt="#"/></figure>
                               <h3>internet</h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product6.png" alt="#"/></figure>
+                              <figure><img src="<?php echo $app_path; ?>images/product6.png" alt="#"/></figure>
                               <h3>Hardisk</h3>
                            </div>
                         </div>
                         <div class="col-md-4">
                            <div class="product_box">
-                              <figure><img src="images/product7.png" alt="#"/></figure>
+                              <figure><img src="<?php echo $app_path; ?>images/product7.png" alt="#"/></figure>
                               <h3>Rams</h3>
                            </div>
                         </div>
                         <div class="col-md-4">
                            <div class="product_box">
-                              <figure><img src="images/product8.png" alt="#"/></figure>
+                              <figure><img src="<?php echo $app_path; ?>images/product8.png" alt="#"/></figure>
                               <h3>Bettery</h3>
                            </div>
                         </div>
                         <div class="col-md-4">
                            <div class="product_box">
-                              <figure><img src="images/product9.png" alt="#"/></figure>
+                              <figure><img src="<?php echo $app_path; ?>images/product9.png" alt="#"/></figure>
                               <h3>Drive</h3>
                            </div>
                         </div>
@@ -169,7 +169,7 @@
                </div>
                <div class="col-md-6">
                   <div class="laptop_box">
-                     <figure><img src="images/pc.png" alt="#"/></figure>
+                     <figure><img src="<?php echo $app_path; ?>images/pc.png" alt="#"/></figure>
                   </div>
                </div>
             </div>
@@ -202,7 +202,7 @@
                                  <div class="row">
                                     <div class="col-md-9 offset-md-3">
                                        <div class="test_box">
-                                          <i><img src="images/cos.png" alt="#"/></i>
+                                          <i><img src="<?php echo $app_path; ?>images/cos.png" alt="#"/></i>
                                           <h4>Sandy Miller</h4>
                                           <p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id</p>
                                        </div>
@@ -217,7 +217,7 @@
                                  <div class="row">
                                     <div class="col-md-9 offset-md-3">
                                        <div class="test_box">
-                                          <i><img src="images/cos.png" alt="#"/></i>
+                                          <i><img src="<?php echo $app_path; ?>images/cos.png" alt="#"/></i>
                                           <h4>Sandy Miller</h4>
                                           <p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id</p>
                                        </div>
@@ -232,7 +232,7 @@
                                  <div class="row">
                                     <div class="col-md-9 offset-md-3">
                                        <div class="test_box">
-                                          <i><img src="images/cos.png" alt="#"/></i>
+                                          <i><img src="<?php echo $app_path; ?>images/cos.png" alt="#"/></i>
                                           <h4>Sandy Miller</h4>
                                           <p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id</p>
                                        </div>
