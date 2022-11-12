@@ -91,14 +91,14 @@ $controller_path = '/' . $dirs[1] . '/' . $dirs[2] . '/Controllers/';
                                           <a class="nav-link" href="">My Account</a>
                                        </li>
                                        <li class="nav-item d_none">
-                                          <a class="nav-link" href="<?php echo $controller_path; ?>logout.php">Logout</a>
+                                          <a class="nav-link" href="' . $controller_path . 'logout.php">Logout</a>
                                        </li>';
                               } else {
                                  echo '<li class="nav-item d_none">
-                                          <a class="nav-link" href="<?php echo $app_path; ?>login.php">Login</a>
+                                          <a class="nav-link" href="' . $app_path . 'login.php">Login</a>
                                        </li>
                                        <li class="nav-item d_none">
-                                          <a class="nav-link" href="<?php echo $app_path; ?>signup.php">Sign up</a>
+                                          <a class="nav-link" href="' . $app_path . 'signup.php">Sign up</a>
                                        </li>';  
                               }
 
