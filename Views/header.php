@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 $uri = filter_input(INPUT_SERVER, 'REQUEST_URI');
 $dirs = explode('/', $uri);
 $app_path = '/' . $dirs[1] . '/' . $dirs[2] . '/Views/';
+$controller_path = '/' . $dirs[1] . '/' . $dirs[2] . '/Controllers/';
 ?>
 
 <!DOCTYPE html>
@@ -70,26 +71,39 @@ $app_path = '/' . $dirs[1] . '/' . $dirs[2] . '/Views/';
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=='index.php') echo 'active';?>">
-                                 <a class="nav-link" href="index.php">Home</a>
+                                 <a class="nav-link" href="<?php echo $app_path; ?>index.php">Home</a>
                               </li>
                               <li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=='about.php') echo 'active';?>">
-                                 <a class="nav-link" href="about.php">About</a>
+                                 <a class="nav-link" href="<?php echo $app_path; ?>about.php">About</a>
                               </li>
                               <li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=='product.php') echo 'active';?>">
-                                 <a class="nav-link" href="product.php">Listings</a>
+                                 <a class="nav-link" href="<?php echo $app_path; ?>product.php">Listings</a>
                               </li>
                               <li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=='contact.php') echo 'active';?>">
-                                 <a class="nav-link" href="contact.php">Contact</a>
+                                 <a class="nav-link" href="<?php echo $app_path; ?>contact.php">Contact</a>
                               </li>
                               <li class="nav-item d_none">
                                  <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                               </li>
-                              <li class="nav-item d_none">
-                                 <a class="nav-link" href="login.php">LOGIN</a>
-                              </li>
-                              <li class="nav-item d_none">
-                                 <a class="nav-link" href="signup.php">SIGN UP</a>
-                              </li>
+                              <?php
+                              if ($_SESSION['loggedin'] == true) {
+                                 echo '<li class="nav-item d_none">
+                                          <a class="nav-link" href="">My Account</a>
+                                       </li>
+                                       <li class="nav-item d_none">
+                                          <a class="nav-link" href="<?php echo $controller_path; ?>logout.php">Logout</a>
+                                       </li>';
+                              } else {
+                                 echo '<li class="nav-item d_none">
+                                          <a class="nav-link" href="<?php echo $app_path; ?>login.php">Login</a>
+                                       </li>
+                                       <li class="nav-item d_none">
+                                          <a class="nav-link" href="<?php echo $app_path; ?>signup.php">Sign up</a>
+                                       </li>';  
+                              }
+
+                              ?>
+
                            </ul>
                         </div>
                      </nav>
