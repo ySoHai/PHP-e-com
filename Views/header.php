@@ -86,7 +86,7 @@ $controller_path = '/' . $dirs[1] . '/' . $dirs[2] . '/Controllers/';
                                  <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                               </li>
                               <?php
-                              if ($_SESSION['loggedin'] == true) {
+                              if (isset($_SESSION['user'])) {
                                  echo '<li class="nav-item d_none">
                                           <a class="nav-link" href="">My Account</a>
                                        </li>

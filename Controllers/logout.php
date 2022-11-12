@@ -1,5 +1,5 @@
 <?php
-$_SESSION['loggedin'] = false;
+$_SESSION['user'] = '';
 $_SESSION = [];
 session_regenerate_id(); // change session ID
 session_destroy();
