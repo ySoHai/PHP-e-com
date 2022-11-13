@@ -10,7 +10,7 @@ if (validateLogin($_POST['email'], $_POST['password'])) {
 	session_set_cookie_params($lifetime, '/');
 	session_start();
 	//$_SESSION['loggedin'] = true;
-	$_SESSION['user'] = $_POST['email'];
+	$_SESSION['userId'] = getUserId($_POST['email']);
 	
 }
 else {

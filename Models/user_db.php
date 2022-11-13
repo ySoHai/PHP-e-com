@@ -43,4 +43,22 @@
             Database::displayError($e->getMessage());
         }
     }
+
+    function getUserId($email) {
+        $db = Database::getDB();
+        $query = 'SELECT userID FROM users
+                WHERE email = :email';
+        try {
+            $statement = $db->prepare($query);
+            $statement->bindValue(':email', $email);
+            $statement->execute();
+            $userId = $statement->fetch();
+            $statement->closeCursor();
+            return $userId;
+
+        } catch (PDOException $e) {
+            Database::displayError($e->getMessage());
+        }
+    }
+
 ?>
