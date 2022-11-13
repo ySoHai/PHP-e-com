@@ -95,7 +95,7 @@ if (session_status() === PHP_SESSION_NONE) {
                               <?php
                               if (!empty($_SESSION['userId'])) {
                                  echo '<li class="nav-item d_none">
-                                          <a class="nav-link" href="">My Account</a>
+                                          <a class="nav-link" href="'. $app_path .'account.php">My Account</a>
                                        </li>
                                        <li class="nav-item d_none">
                                           <a class="nav-link" href="' . $controller_path . 'logout.php">Logout</a>
