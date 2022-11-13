@@ -12,11 +12,6 @@ if (validateLogin($_POST['email'], $_POST['password'])) {
 	$_SESSION['userId'] = getUserId($_POST['email']);
 	header('Location: ../index.php');
 	
-
-	//session_start();
-	//$_SESSION['loggedin'] = true;
-	//$_SESSION['userId'] = getUserId($_POST['email']);
-	
 }
 else {
 	$error_login = 'Invalid!';
