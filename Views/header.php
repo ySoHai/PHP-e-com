@@ -8,6 +8,13 @@ $uri = filter_input(INPUT_SERVER, 'REQUEST_URI');
 $dirs = explode('/', $uri);
 $app_path = '/' . $dirs[1] . '/' . $dirs[2] . '/Views/';
 $controller_path = '/' . $dirs[1] . '/' . $dirs[2] . '/Controllers/';
+
+if (session_status() === PHP_SESSION_NONE) {
+   $lifetime = 60 * 60 * 24 * 30;    // 30 days in seconds
+   session_set_cookie_params($lifetime, '/');
+   session_start();
+ }
+
 ?>
 
 <!DOCTYPE html>
