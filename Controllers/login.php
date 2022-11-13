@@ -8,7 +8,7 @@ if (validateLogin($_POST['email'], $_POST['password'])) {
 	$lifetime = 60 * 60 * 24 * 30;    // 30 days in seconds
 	session_set_cookie_params($lifetime, '/');
 	session_start();
-	$_SESSION['userId'] = $userId['userID'];
+	$_SESSION['userId'] = $userId;
 	header('Location: ../index.php');
 	
 
