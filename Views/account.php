@@ -5,7 +5,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Contact</h2>
+                     <h2>My Account</h2>
                   </div>
                </div>
             </div>
