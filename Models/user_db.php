@@ -25,7 +25,7 @@
     }
 	
 	function validateEmail($email) {
-		if(empty($email))  return false;
+		if(empty($email)) return false;
 		
         $db = Database::getDB();
         $query = 'SELECT email FROM users';
@@ -35,7 +35,7 @@
             $emails = $statement->fetch();
             $statement->closeCursor();
             
-            if(!empty($emails)&&in_array($email, $emails)){
+            if(!empty($emails)&&!in_array($email, $emails)){
                 return true;
             } else {
                 return false;
