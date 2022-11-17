@@ -1,5 +1,5 @@
 <?php require_once('header.php'); 
-include_once ('../Models/user_class.php');
+require_once ($model_path.'user_class.php');
 ?>
       <!--  account -->
       <div class="contact">
