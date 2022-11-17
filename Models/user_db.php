@@ -22,18 +22,16 @@
         
     }
 	
-	function validateLogin($email, $password) {
+	function validateEmail($email) {
         $db = Database::getDB();
-        $query = 'SELECT password FROM users
-                    WHERE email = :email';
+        $query = 'SELECT email FROM users';
         try {
             $statement = $db->prepare($query);
-            $statement->bindValue(':email', $email);
             $statement->execute();
-            $pword = $statement->fetch();
+            $emails = $statement->fetch();
             $statement->closeCursor();
             
-            if(in_array($password, $pword)){
+            if(in_array($email, $emails)){
                 return true;
             } else {
                 return false;
