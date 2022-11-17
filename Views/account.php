@@ -28,9 +28,9 @@
                            </div>
                            <div class="col-md-6">
                               <div class="box_text">
-                                 <a class="nav-link" href="#">List An item</a>
-                                 <a class="nav-link" href="#">My Listings</a>
-                                 <a class="nav-link" href="#">My Orders</a>
+                                 <a class="nav-link" href="#"><b>List An item</b></a>
+                                 <a class="nav-link" href="#"><b>My Listings</b></a>
+                                 <a class="nav-link" href="#"><b>My Orders</b></a>
                               </div>
                            </div>
                         </div>
