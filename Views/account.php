@@ -28,15 +28,15 @@
                            </div>
                            <div class="col-md-6">
                               <div class="box_text">
-                              <li class="nav-item">
-                                 <a class="nav-link" href="#"><b>List An item</b></a>
-                              </li>
-                              <li class="nav-item">   
-                                 <a class="nav-link" href="#"><b>My Listings</b></a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="#"><b>My Orders</b></a>
-                              </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="addlisting.php"><b>List An item</b></a>
+                                 </li>
+                                 <li class="nav-item">   
+                                    <a class="nav-link" href="listing.php"><b>My Listings</b></a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="order.php"><b>My Orders</b></a>
+                                 </li>
                               </div>
                            </div>
                         </div>
