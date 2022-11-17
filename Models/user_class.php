@@ -1,6 +1,6 @@
 <?php
 class User {
-    public int $id;
+    //public int $id;
     
     public function __construct(
         private string $email,
@@ -8,6 +8,7 @@ class User {
         private string $address,
         private string $fName,
         private string $lName,
+        private int $id,
     ) {  }
     
     public function getUserID() {
