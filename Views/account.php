@@ -3,7 +3,7 @@ require_once ('../Models/user_class.php');
 
 $var=new User();
 
-$var->setUserID($_SESSION['userId']);
+$var->setUserID((int)$_SESSION['userId']);
 
 ?>
       <!--  account -->
