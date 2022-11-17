@@ -8,6 +8,7 @@ $uri = filter_input(INPUT_SERVER, 'REQUEST_URI');
 $dirs = explode('/', $uri);
 $app_path = '/' . $dirs[1] . '/Views/';
 $controller_path = '/' . $dirs[1] . '/Controllers/';
+$model_path =  '/' . $dirs[1] . '/Models/';
 
 if (session_status() === PHP_SESSION_NONE) {
    session_start();
