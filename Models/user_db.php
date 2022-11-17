@@ -1,5 +1,7 @@
 <?php
     function validateLogin($email, $password) {
+		if(empty($email)||empty($password))  return false;
+		
         $db = Database::getDB();
         $query = 'SELECT password FROM users
                     WHERE email = :email';
@@ -10,7 +12,7 @@
             $pword = $statement->fetch();
             $statement->closeCursor();
             
-            if(in_array($password, $pword)){
+            if(!empty($pword)&&in_array($password, $pword)){
                 return true;
             } else {
                 return false;
@@ -23,6 +25,8 @@
     }
 	
 	function validateEmail($email) {
+		if(empty($email))  return false;
+		
         $db = Database::getDB();
         $query = 'SELECT email FROM users';
         try {
@@ -31,7 +35,7 @@
             $emails = $statement->fetch();
             $statement->closeCursor();
             
-            if(in_array($email, $emails)){
+            if(!empty($emails)&&in_array($email, $emails)){
                 return true;
             } else {
                 return false;
