@@ -11,6 +11,7 @@
             </div>
             <div class="row">
                <div class="col-md-10 offset-md-1">
+			   <?php if (!empty($error_signup)) echo '<p>'.$error_signup.'</p>'; ?>
                   <form id="request" class="main_form" method="post" action="../Controllers/signup.php">
                      <div class="row">
                         <div class="col-md-12 ">
