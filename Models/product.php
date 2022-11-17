@@ -12,6 +12,7 @@ class Product {
         private bool $quality,
         private int $ship_days,
         private Category $category,
+		private User $user,
     ) { }
 
     public function getID() {
@@ -83,6 +84,14 @@ class Product {
         $this->category = $value;
     }
     
+	 public function getUser() {
+        return $this->user;
+    }
+
+    public function setUser(User $value) {
+        $this->user = $value;
+    }
+	
 }
 
 ?>
