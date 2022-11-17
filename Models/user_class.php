@@ -1,6 +1,6 @@
 <?php
 class User {
-    private int $id;
+    public int $id;
     
     public function __construct(
         private string $email,
