@@ -1,5 +1,10 @@
 <?php require_once('header.php'); 
-require_once ($model_path.'user_class.php');
+require_once ('../Models/user_class.php');
+
+$var=new User();
+
+$var->setUserID($_SESSION['userId']);
+
 ?>
       <!--  account -->
       <div class="contact">
@@ -20,7 +25,7 @@ require_once ($model_path.'user_class.php');
                               <div class="box_text">
                                  <h3>My Infomation</h3>
                                     <p>
-                                       <b>Email:</b> <php? echo getEmail() ?> <br>
+                                       <b>Email:</b> <?php echo $var->getEmail(); ?> <br>
                                        <b>First Name:</b> "code" <br>
                                        <b>Last Name:</b> "code" <br>
                                        <b>Phone Number:</b> "code" <br>
