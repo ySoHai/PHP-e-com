@@ -28,7 +28,7 @@ class User {
                 WHERE userID = :userID';
         try {
             $statement = $db->prepare($query);
-            $statement->bindValue(':userID', $id);
+            $statement->bindValue(':userID', $this->id);
             $statement->execute();
             $email = $statement->fetch();
             $statement->closeCursor();
@@ -50,7 +50,7 @@ class User {
                 WHERE userID = :userID';
         try {
             $statement = $db->prepare($query);
-            $statement->bindValue(':userID', $id);
+            $statement->bindValue(':userID', $this->id);
             $statement->execute();
             $pNum = $statement->fetch();
             $statement->closeCursor();
@@ -72,7 +72,7 @@ class User {
                 WHERE userID = :userID';
         try {
             $statement = $db->prepare($query);
-            $statement->bindValue(':userID', $id);
+            $statement->bindValue(':userID', $this->id);
             $statement->execute();
             $address = $statement->fetch();
             $statement->closeCursor();
@@ -94,7 +94,7 @@ class User {
                 WHERE userID = :userID';
         try {
             $statement = $db->prepare($query);
-            $statement->bindValue(':userID', $id);
+            $statement->bindValue(':userID', $this->id);
             $statement->execute();
             $fName = $statement->fetch();
             $statement->closeCursor();
@@ -116,7 +116,7 @@ class User {
                 WHERE userID = :userID';
         try {
             $statement = $db->prepare($query);
-            $statement->bindValue(':userID', $id);
+            $statement->bindValue(':userID', $this->id);
             $statement->execute();
             $lName = $statement->fetch();
             $statement->closeCursor();
@@ -135,7 +135,7 @@ class User {
                   ORDER BY orderID';
         try {
             $statement = $db->prepare($query);
-            $statement->bindValue(':userID', $id);
+            $statement->bindValue(':userID', $this->id);
             $statement->execute();
             $orders = $statement->fetchAll();
             $statement->closeCursor();
@@ -153,7 +153,7 @@ class User {
                   ORDER BY productID';
         try {
             $statement = $db->prepare($query);
-            $statement->bindValue(':userID', $id);
+            $statement->bindValue(':userID', $this->id);
             $statement->execute();
             $listings = $statement->fetchAll();
             $statement->closeCursor();
