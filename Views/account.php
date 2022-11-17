@@ -1,4 +1,6 @@
-<?php require_once('header.php'); ?>
+<?php require_once('header.php'); 
+include_once $model_path.'user_class.php';
+?>
       <!--  account -->
       <div class="contact">
          <div class="container">
@@ -18,7 +20,7 @@
                               <div class="box_text">
                                  <h3>My Infomation</h3>
                                     <p>
-                                       <b>Email:</b> "code" <br>
+                                       <b>Email:</b> <php? echo getEmail() ?> <br>
                                        <b>First Name:</b> "code" <br>
                                        <b>Last Name:</b> "code" <br>
                                        <b>Phone Number:</b> "code" <br>
