@@ -21,6 +21,29 @@
         }
         
     }
+	
+	function validateLogin($email, $password) {
+        $db = Database::getDB();
+        $query = 'SELECT password FROM users
+                    WHERE email = :email';
+        try {
+            $statement = $db->prepare($query);
+            $statement->bindValue(':email', $email);
+            $statement->execute();
+            $pword = $statement->fetch();
+            $statement->closeCursor();
+            
+            if(in_array($password, $pword)){
+                return true;
+            } else {
+                return false;
+            }
+            
+        } catch (PDOException $e) {
+            Database::displayError($e->getMessage());
+        }
+        
+    }
     
     function registerUser($email,$pnum,$address,$fname,$lname,$password) {
         $db = Database::getDB();
