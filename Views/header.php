@@ -87,22 +87,19 @@ if (session_status() === PHP_SESSION_NONE) {
                               <li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=='contact.php') echo 'active';?>">
                                  <a class="nav-link" href="<?php echo $app_path; ?>contact.php">Contact</a>
                               </li>
-                              <li class="nav-item d_none">
-                                 <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-                              </li>
                               <?php
                               if (!empty($_SESSION['userId'])) {
-                                 echo '<li class="nav-item d_none">
+                                 echo '<li class="nav-item">
                                           <a class="nav-link" href="'. $app_path .'account.php">My Account</a>
                                        </li>
-                                       <li class="nav-item d_none">
+                                       <li class="nav-item">
                                           <a class="nav-link" href="' . $controller_path . 'logout.php">Logout</a>
                                        </li>';
                               } else {
-                                 echo '<li class="nav-item d_none">
+                                 echo '<li class="nav-item">
                                           <a class="nav-link" href="' . $app_path . 'login.php">Login</a>
                                        </li>
-                                       <li class="nav-item d_none">
+                                       <li class="nav-item">
                                           <a class="nav-link" href="' . $app_path . 'signup.php">Sign up</a>
                                        </li>';  
                               }
