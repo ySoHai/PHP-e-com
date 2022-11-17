@@ -8,7 +8,7 @@ class User {
         private string $address,
         private string $fName,
         private string $lName,
-        private int $id,
+        public int $id,
     ) {  }
     
     public function getUserID() {
