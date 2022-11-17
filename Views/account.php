@@ -17,18 +17,20 @@
                            <div class="col-md-6">
                               <div class="box_text">
                                  <h3>My Infomation</h3>
-                                    <p><b>Name:</b> "code" <br>
-                                    <b>Name:</b> "code" <br>
-                                    <b>Name:</b> "code" <br>
-                                    <b>Name:</b> "code" <br>
-                                    <b>Name:</b> "code" <br>
+                                    <p>
+                                       <b>Email:</b> "code" <br>
+                                       <b>First Name:</b> "code" <br>
+                                       <b>Last Name:</b> "code" <br>
+                                       <b>Phone Number:</b> "code" <br>
+                                       <b>Address:</b> "code" <br>
                                     </p>
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="box_text">
-                                 <h3>Buy</h3>
-                                    <p>Get great items for the best price!</p>
+                                 <div href="#"><h3>List An item</h3></div>
+                                 <div href="#"><h3>My Listings</h3>
+                                 <div href="#"><h3>My Orders</h3>
                               </div>
                            </div>
                         </div>
