@@ -1,14 +1,13 @@
 <?php
 class User {
     private int $id;
-    private string $email;
-    private string $pNum;
-    private string $address;
-    private string $fName;
-    private string $lName;
-
+    
     public function __construct(
-
+        private string $email,
+        private string $pNum,
+        private string $address,
+        private string $fName,
+        private string $lName,
     ) {  }
     
     public function getUserID() {
