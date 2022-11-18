@@ -1,23 +1,45 @@
 <?php
-function get_categories() {
-    global $db;
-    $query = 'SELECT * FROM categories
-              ORDER BY categoryID';
-    $statement = $db->prepare($query);
-    $statement->execute();
-    return $statement;    
-}
+class CategoryDB {
+    public static function get_categories() {
+        $db = Database::getDB();
+        $query = 'SELECT categoryID, description 
+                  FROM categories
+                  ORDER BY categoryID';
+        try {
+            $statement = $db->prepare($query);
+            $statement->execute();
+            
+            $rows = $statement->fetchAll();
+            $statement->closeCursor();
+            
+            $categories = [];
+            foreach ($rows as $row) {
+                $categories[] = new Category($row['categoryID'],
+                                             $row['description']);
+            }
+            return $categories;
+        } catch (PDOException $e) {
+            Database::displayError($e->getMessage());
+        }    
+    }
 
-function get_category_by_description($category_description) {
-    global $db;
-    $query = 'SELECT * FROM categories
-              WHERE description = :category_description';    
-    $statement = $db->prepare($query);
-    $statement->bindValue(':category_description', $category_description);
-    $statement->execute();    
-    $category = $statement->fetch();
-    $statement->closeCursor();    
-    $category_description = $category['description'];
-    return $category_description;
+    public static function getCategory($category_id) {
+        $db = Database::getDB();
+        $query = 'SELECT categoryID, description 
+                  FROM categories
+                  WHERE categoryID = :category_id';
+        try {
+            $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $category_id);
+            $statement->execute();
+            
+            $row = $statement->fetch();
+            $statement->closeCursor();
+            
+            return new Category($row['categoryID'], $row['description']);
+        } catch (PDOException $e) {
+            Database::displayError($e->getMessage());
+        }
+    }
 }
 ?>
