@@ -11,19 +11,19 @@
             </div>
             <div class="row">
                <div class="col-md-10 offset-md-1">
-                  <form id="request" class="main_form">
+                  <form id="request" class="main_form" method="POST">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Name" type="type" name="Name"> 
+                           <input class="contactus" placeholder="Name" type="type" name="Name" required> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                           <input class="contactus" placeholder="Email" type="type" name="Email" required> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
+                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number" required>                          
                         </div>
                         <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="type" Message="Name">Message </textarea>
+                           <textarea class="textarea" placeholder="Message" type="type" Message="Name" required>Message </textarea>
                         </div>
                         <div class="col-md-12">
                            <button class="send_btn">Send</button>

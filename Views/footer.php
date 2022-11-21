@@ -8,27 +8,17 @@ $app_path = '/' . $dirs[1] . '/Views/';
         <div class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                    <h3>TechTrade</h3>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                <div class="col-6">
                     <h3>About Us</h3>
                     <ul class="about_us">
                     <li>Website of a Advanced Web Development Project</li>
                     </ul>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                <div class="col-6">
                     <h3>Contact Us</h3>
                     <ul class="conta">
                     <li>Send us an Email:<br>contact@techtrade.com</li>
                     </ul>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                    <form class="bottom_form">
-                    <h3>Newsletter</h3>
-                    <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
-                    <button class="sub_btn">subscribe</button>
-                    </form>
                 </div>
             </div>
         </div>

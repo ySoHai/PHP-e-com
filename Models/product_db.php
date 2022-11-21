@@ -1,5 +1,7 @@
 <?php
 
+require_once('product.php');
+
 class ProductDB {
     public static function get_products() {
         $db = Database::getDB();

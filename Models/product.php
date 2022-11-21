@@ -1,4 +1,7 @@
-<? php
+<?php
+
+require_once('category.php');
+require_once('user_class.php');
 
 class Product {
     
