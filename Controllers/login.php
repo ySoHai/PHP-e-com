@@ -14,7 +14,7 @@ if (validateLogin($_POST['email'], $_POST['password'])) {
 	
 }
 else {
-	$error_login = 'Invalid!';
+	$error_login = true;
 	include_once("../Views/login.php");
 }
 ?>

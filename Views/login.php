@@ -11,7 +11,7 @@
             </div>
             <div class="row">
                <div class="col-md-10 offset-md-1">
-				<?php if (!empty($error_login)) echo '<p>'.$error_login.'</p>'; ?>
+				<?php if (isset($error_login)&&$error_login) echo '<script>alert("Please try again!");</script>'; ?>
                   <form id="request" class="main_form" method="post" action="../Controllers/login.php">
                      <div class="row">
                         <div class="col-md-12 ">

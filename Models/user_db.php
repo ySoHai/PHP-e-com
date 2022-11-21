@@ -28,17 +28,19 @@
 		if(empty($email)) return false;
 		
         $db = Database::getDB();
-        $query = 'SELECT email FROM users';
+        $query = 'SELECT email FROM users
+                    WHERE email = :email';
         try {
             $statement = $db->prepare($query);
+            $statement->bindValue(':email', $email);
             $statement->execute();
             $emails = $statement->fetch();
             $statement->closeCursor();
             
-            if(!empty($emails)&&!in_array($email, $emails)){
-                return true;
-            } else {
+            if(!empty($emails)){
                 return false;
+            } else {
+                return true;
             }
             
         } catch (PDOException $e) {

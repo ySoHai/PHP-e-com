@@ -1,16 +1,18 @@
 <?php
 session_start(); 
-session_destroy();
 
 if(isset($_COOKIE[session_name()])){
-    $name = session_name();  // get session cookie name 
-    $expire = new DateTime('-1 year'); // set expire date in the past
-    $params = session_get_cookie_params(); // get session paramas
-    $path = $params['/'];
-    setcookie($name, '', $expire, $path);
+    $name = session_name();
+	$expire = time() - 60 * 60 * 24 * 365;
+	$params = session_get_cookie_params();
+	$path = $params['path'];
+	$domain = $params['domain'];
+	$secure = $params['secure'];
+	$httponly = $params['httponly'];
+	setcookie($name, '', $expire, $path, $domain, $secure, $httponly);
+	$_SESSION = [];
+	session_destroy();
 }
-
-
 
 header('Location: ../Views/index.php');
 exit();
