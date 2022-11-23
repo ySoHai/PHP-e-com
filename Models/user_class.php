@@ -7,17 +7,22 @@ class User {
     private string $fName;
     private string $lName;
 
-    public function __construct(
-
-    ) {  }
+    public function __construct(int $value) {
+        $this->id = $value;
+        $this->setEmail();
+        $this->setPhone();
+        $this->setAdd();
+        $this->setFName();
+        $this->setLName();
+      }
     
     public function getUserID() {
         return $this->id;
     }
 
-    public function setUserID(int $value) {
-        $this->id = $value;
-    }
+    //public function setUserID(int $value) {
+    //    $this->id = $value;
+    //}
     
     public function getEmail() {
         return $this->email;

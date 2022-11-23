@@ -1,9 +1,10 @@
 <?php require_once('header.php'); 
 require_once ('../Models/user_class.php');
+require_once ('../Models/user_class.php');
 
-$var=new User();
+$user = new User($_SESSION['userId']);
 
-$var->setUserID((int)$_SESSION['userId']);
+
 
 ?>
       <!--  account -->
@@ -25,11 +26,11 @@ $var->setUserID((int)$_SESSION['userId']);
                               <div class="box_text">
                                  <h3>My Infomation</h3>
                                     <p>
-                                       <b>Email:</b> <?php echo $var->getEmail(); ?> <br>
-                                       <b>First Name:</b> "code" <br>
-                                       <b>Last Name:</b> "code" <br>
-                                       <b>Phone Number:</b> "code" <br>
-                                       <b>Address:</b> "code" <br>
+                                       <b>Email:</b> <?php echo $user->getEmail(); ?> <br>
+                                       <b>First Name:</b> <?php echo $user->getFName(); ?> <br>
+                                       <b>Last Name:</b> <?php echo $user->getLName(); ?> <br>
+                                       <b>Phone Number:</b> <?php echo $user->getPhone(); ?> <br>
+                                       <b>Address:</b> <?php echo $user->getAdd(); ?> <br>
                                     </p>
                               </div>
                            </div>
