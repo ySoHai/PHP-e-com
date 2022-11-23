@@ -2,7 +2,7 @@
 require_once ('../Models/user_class.php');
 require_once ('../Models/user_class.php');
 
-$user = new User($_SESSION['userId']);
+$user = new User((int)$_SESSION['userId']);
 
 
 
