@@ -1,6 +1,6 @@
 <?php require_once('header.php'); 
 require_once ('../Models/user_class.php');
-require_once ('../Models/user_class.php');
+require_once('../Models/database.php');
 
 $user = new User((int)$_SESSION['userId']);
 
