@@ -9,11 +9,15 @@ class User {
 
     public function __construct(int $value) {
         $this->id = $value;
-        $this->setEmail();
-        $this->setPhone();
-        $this->setAdd();
-        $this->setFName();
-        $this->setLName();
+
+        if(!empty($id)){
+            $this->setEmail();
+            $this->setPhone();
+            $this->setAdd();
+            $this->setFName();
+            $this->setLName();
+        }
+
       }
     
     public function getUserID() {
@@ -43,7 +47,7 @@ class User {
             Database::displayError($e->getMessage());
         } 
         
-        $this->email = $email['email'];
+        $this->email = $email;
     }
     
     public function getPhone() {
@@ -65,7 +69,7 @@ class User {
             Database::displayError($e->getMessage());
         } 
         
-        $this->pNum = $pNum['phone'];
+        $this->pNum = $pNum;
     }
     
     public function getAdd() {
@@ -87,7 +91,7 @@ class User {
             Database::displayError($e->getMessage());
         } 
         
-        $this->address = $address['address'];
+        $this->address = $address;
     }
     
     public function getFName() {
@@ -109,7 +113,7 @@ class User {
             Database::displayError($e->getMessage());
         } 
         
-        $this->fName = $fName['name_first'];
+        $this->fName = $fName;
     }
     
     public function getLName() {
@@ -131,7 +135,7 @@ class User {
             Database::displayError($e->getMessage());
         } 
         
-        $this->lName = $lName['name_last'];
+        $this->lName = $lName;
     }
     
     public function getOrders() {
