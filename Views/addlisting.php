@@ -43,7 +43,7 @@
                            <label for="Category" style="color:white; font-size:1.2em;">Category</label>
                            <select class="contactus" id="Category" required>
                               <?php foreach($categories as $category) : ?>
-                                 <option value="<?php echo $category->getID(); ?>" name="category" style="color:black;">
+                                 <option name="category" value="<?php echo $category->getID(); ?>" style="color:black;">
                                        <?php echo $category->getDescription(); ?>
                                  </option>
                               <?php endforeach; ?>
