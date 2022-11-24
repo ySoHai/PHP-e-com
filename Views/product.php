@@ -7,6 +7,7 @@
 	require_once('../Models/category_db.php');
 	if (isset($_GET["cat"])) $products = ProductDB::get_product_by_category($_GET["cat"]);
 	else $products = ProductDB::get_active_products();
+	$cats = CategoryDB::get_categories();
 ?>
       <!-- products -->
       <div  class="products" style="margin-top: 0px;">
@@ -14,7 +15,12 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Listings <?php if (isset($_GET["cat"])) echo '('.CategoryDB::getCategory($_GET["cat"])->getDescription().')';?></h2>
+                     <h2>Listings <?php if (isset($_GET["cat"])) echo '('.CategoryDB::getCategory($_GET["cat"])->getDescription().')'; else echo '(ALL)';?></h2>
+					 <p style="margin-top: 20px;"><b>Categories:</b> <a href="product.php">ALL</a> <?php
+							foreach ($cats as $cat) {
+								echo '| <a href="product.php?cat='.$cat->getID().'">'.$cat->getDescription().'</a> ';
+							}
+						?></p>
                   </div>
                </div>
             </div>

@@ -74,8 +74,8 @@ class Product {
     }
 	
 	public function getQualityS() {
-        if($this->quality) return "NEW";
-		else return "USED";
+        if($this->quality) return "new";
+		else return "used";
     }
     
     public function setQuality(bool $value) {

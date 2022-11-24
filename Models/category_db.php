@@ -4,7 +4,7 @@ class CategoryDB {
         $db = Database::getDB();
         $query = 'SELECT categoryID, description 
                   FROM categories
-                  ORDER BY categoryID';
+                  ORDER BY description';
         try {
             $statement = $db->prepare($query);
             $statement->execute();

@@ -1,14 +1,15 @@
-<?php require_once('header.php'); 
-require_once ('../Models/user_class.php');
-require_once('../Models/database.php');
+<?php
+session_start();
 
-if(isset($_SESSION['userId'])){
-   $user = new User((int)$_SESSION['userId']);
-}else{
-   echo '<script>alert("Not Login In!");</script>';
+if(!isset($_SESSION['userId'])){
+	header("Location: ./login.php");
+	die('Something went very wrong :(');
 }
 
-
+require_once('header.php'); 
+require_once ('../Models/user_class.php');
+require_once('../Models/database.php');
+$user = new User((int)$_SESSION['userId']);
 ?>
       <!--  account -->
       <div class="contact">

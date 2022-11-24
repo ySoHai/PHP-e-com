@@ -1,4 +1,13 @@
-<?php require_once('header.php'); ?>
+<?php
+session_start();
+
+if(isset($_SESSION['userId'])){
+    header("Location: ./account.php");
+	die('Something went very wrong :(');
+}-
+
+require_once('header.php');
+?>
       <!--  signup -->
       <div class="contact">
          <div class="container">
