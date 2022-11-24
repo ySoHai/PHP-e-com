@@ -7,16 +7,16 @@
                   <div class="titlepage">
                      <h2>My Orders</h2>
                   </div>
-                  <table class="table">
+                  <table class="table table-hover">
                      <tr class="thead-dark">
                         <th scope="col">Order ID</th>
                         <th scope="col">Ordered Date</th>
                         <th scope="col">Total</th>
                      </tr>
                      <tr>
-                        <td>1111</td>
-                        <td>test</td>
-                        <td>$ 1,230</td>
+                        <td class="thead-light">1111</td>
+                        <td class="thead-light">test</td>
+                        <td class="thead-light">$ 1,230</td>
                      </tr>
                   </table>
                </div>
