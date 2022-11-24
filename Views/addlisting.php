@@ -1,17 +1,8 @@
-<?php 
-session_start();
-
-if(!isset($_SESSION['userId'])){
-	header("Location: ./login.php");
-	die('Something went very wrong :(');
-}
-
-require_once('header.php');
-require_once('../Models/database.php');
-require_once('../Models/category_db.php');
-require_once('../Models/category.php');
-$categories = CategoryDB::get_categories();
-?>
+<?php require_once('header.php');
+      require_once('../Models/database.php');
+      require_once('../Models/category_db.php');
+      require_once('../Models/category.php');
+      $categories = CategoryDB::get_categories(); ?>
       <!--  add listing -->
       <div class="contact">
          <div class="container">
@@ -50,9 +41,9 @@ $categories = CategoryDB::get_categories();
                         </div>
                         <div class="col-md-12">
                            <label for="Category" style="color:white; font-size:1.2em;">Category</label>
-                           <select class="contactus" id="Category" required>
+                           <select class="contactus" id="Category" name="category" required>
                               <?php foreach($categories as $category) : ?>
-                                 <option name="category" value="<?php echo $category->getID(); ?>" style="color:black;">
+                                 <option value=<?php echo $category->getID(); ?> style="color:black;">
                                        <?php echo $category->getDescription(); ?>
                                  </option>
                               <?php endforeach; ?>
