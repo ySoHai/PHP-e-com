@@ -6,7 +6,6 @@ if(isset($_SESSION['userId'])){
    $user = new User((int)$_SESSION['userId']);
 }else{
    echo '<script>alert("Not Login In!");</script>';
-   header("Location: index.php");
 }
 
 
