@@ -24,7 +24,7 @@
 						foreach ($products as $product) {
 							echo '<div class="col-md-4">
 							   <div class="product_box">
-								  <h4>'.$product->getName().'</h4>
+								  <h4><a href="product_details.php?id='.$product->getID().'">'.$product->getName().'</a></h4>
 								  <p><b>$'.$product->getPrice().' ('.$product->getQualityS().')</b><br>'.$product->getQuantity().' available</p>
 							   </div>
 							</div>';
