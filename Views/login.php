@@ -15,10 +15,10 @@
                   <form id="request" class="main_form" method="post" action="../Controllers/login.php">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Enter Email" type="type" name="email">
+                           <input class="contactus" placeholder="Enter Email" type="type" name="email" required>
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Enter Password" type="password" name="password"> 
+                           <input class="contactus" placeholder="Enter Password" type="password" name="password" required> 
                         </div>
                         <div class="col-md-12">
                            <button class="send_btn">Login</button>
