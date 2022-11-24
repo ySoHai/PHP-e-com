@@ -2,8 +2,11 @@
 require_once ('../Models/user_class.php');
 require_once('../Models/database.php');
 
-$user = new User((int)$_SESSION['userId']);
-
+if(isset($_SESSION['userId'])){
+   $user = new User((int)$_SESSION['userId']);
+}else{
+   echo '<script>alert("Not Login In!");</script>';
+}
 
 
 ?>
@@ -29,7 +32,9 @@ $user = new User((int)$_SESSION['userId']);
                                        <b>Email:</b> <?php echo $user->getEmail(); ?> <br>
                                        <b>First Name:</b> <?php echo $user->getFName(); ?> <br>
                                        <b>Last Name:</b> <?php echo $user->getLName(); ?> <br>
-                                       <b>Phone Number:</b> <?php echo $user->getPhone(); ?> <br>
+                                       <?php if($user->getPhone()!= ''){
+                                                echo '<b>Phone Number:</b>' .$user->getPhone(). '<br>';
+                                             }?>
                                        <b>Address:</b> <?php echo $user->getAdd(); ?> <br>
                                     </p>
                               </div>
@@ -37,13 +42,13 @@ $user = new User((int)$_SESSION['userId']);
                            <div class="col-md-6">
                               <div class="box_text">
                                  <li class="nav-item">
-                                    <a class="nav-link" href="addlisting.php"><b>List An item</b></a>
+                                    <a class="nav-link h2" href="addlisting.php"><b>List An item</b></a>
                                  </li>
                                  <li class="nav-item">   
-                                    <a class="nav-link" href="listing.php"><b>My Listings</b></a>
+                                    <a class="nav-link h2" href="listing.php"><b>My Listings</b></a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link" href="order.php"><b>My Orders</b></a>
+                                    <a class="nav-link h2" href="order.php"><b>My Orders</b></a>
                                  </li>
                               </div>
                            </div>

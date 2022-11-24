@@ -64,8 +64,12 @@ class User {
         } catch (PDOException $e) {
             Database::displayError($e->getMessage());
         } 
-        
-        $this->pNum = $pNum['phone'];
+
+        if($pNum['phone'] == null){
+            $this->pNum = "";
+        }else{
+            $this->pNum = $pNum['phone'];
+        }
     }
     
     public function getAdd() {
