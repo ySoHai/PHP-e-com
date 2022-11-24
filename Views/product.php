@@ -1,5 +1,7 @@
 <?php
 	require_once('header.php');
+	require_once('../Models/database.php');
+	require_once('../Models/product.php');
 	require_once('../Models/product_db.php');
 	$productDB = new ProductDB();
 	$products = $productDB->get_products();
@@ -20,10 +22,10 @@
                      <div class="row">
 					 <?php
 						foreach ($products as $product) {
-							echo '<div class="col-md-4 margin_bottom1">
+							echo '<div class="col-md-4">
 							   <div class="product_box">
-								  <h3>'.$product->getName().'</h3>
-								  <p>'.$product->getDescription().'<br><b>$'.$product->getPrice().'</b></p>
+								  <h4>'.$product->getName().'</h4>
+								  <p><b>$'.$product->getPrice().' ('.$product->getQualityS().')</b><br>'.$product->getQuantity().' available</p>
 							   </div>
 							</div>';
 						}

@@ -1,7 +1,4 @@
 <?php
-
-require_once('product.php');
-
 class ProductDB {
     public static function get_products() {
         $db = Database::getDB();
@@ -52,7 +49,7 @@ class ProductDB {
             
             $products = [];
             foreach ($rows as $row) {
-                $products[] = self::loadProduct($row, $category);
+                $products[] = self::loadProduct($row);
             }
             return $products;
         } catch (PDOException $e) {
@@ -60,17 +57,16 @@ class ProductDB {
         }
     }
     
-    private static function loadProduct($row, $category) {
-        $product = new Product($category,
-                                $row['productID'],
-                                $row['name'],
-                                $row['description'],
-                                $row['price'],
-                                $row['quantity'],
-                                $row['quality_new'],
-                                $row['ship_days'],
-                                $row['sellerID']);
-        $product->setID($row['productID']);
+    private static function loadProduct($row) {
+        $product = new Product($row['productID'],
+                                            $row['name'],
+                                            $row['description'],
+                                            $row['price'],
+                                            $row['quantity'],
+                                            $row['quality_new'],
+                                            $row['ship_days'],
+                                            $row['categoryID'],
+                                            $row['sellerID']);
         return $product;
     }
     
@@ -87,9 +83,8 @@ class ProductDB {
             
             $row = $statement->fetch();
             $statement->closeCursor();
-            
-            $category = CategoryDB::getCategory($row['categoryID']);
-            return self::loadProduct($row, $category);
+			
+            return self::loadProduct($row);
         } catch (PDOException $e) {
             Database::displayError($e->getMessage());
         }

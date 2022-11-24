@@ -1,9 +1,12 @@
 <?php
 class Category {
+	private int $id;
+        private string $description;
     public function __construct(
-        private int $id,
-        private string $description,
-    ) { }
+        int $id_
+    ) {
+		$this->id = $id_;
+	}
 
     public function getID() {
         return $this->id;

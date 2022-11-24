@@ -1,22 +1,28 @@
 <?php
 
-require_once('category.php');
-require_once('user_class.php');
-
 class Product {
     
     private int $id;
+	private string $name;
+    private string $description;
+	private float $price;
+	private int $quantity;
+	private bool $quality;
+	private int $ship_days;
+	private int $category;
+	private int $sellerID;
     
-    public function __construct(
-        private string $name,
-        private string $description,
-        private float $price,
-        private int $quantity,
-        private bool $quality,
-        private int $ship_days,
-        private Category $category,
-		private User $user,
-    ) { }
+    public function __construct(int $id_=0,string $name_="",string $description_="",float $price_=0,int $quantity_=0,bool $quality_=false,int $ship_days_=0,int $category_=0,int $sellerID_=0) {
+		$this->id = $id_;
+		$this->name = $name_;
+		$this->price = $price_;
+		$this->quantity = $quantity_;
+		$this->quality = $quality_;
+		$this->ship_days = $ship_days_;
+		$this->category = $category_;
+		$this->description = $description_;
+		$this->sellerID = $sellerID_;
+	}
 
     public function getID() {
         return $this->id;
@@ -66,6 +72,11 @@ class Product {
     public function getQuality() {
         return $this->quality;
     }
+	
+	public function getQualityS() {
+        if($this->quality) return "NEW";
+		else return "USED";
+    }
     
     public function setQuality(bool $value) {
         $this->quality = $value;
@@ -83,16 +94,16 @@ class Product {
         return $this->category;
     }
 
-    public function setCategory(Category $value) {
+    public function setCategory(int $value) {
         $this->category = $value;
     }
     
 	 public function getUser() {
-        return $this->user;
+        return $this->sellerID;
     }
 
-    public function setUser(User $value) {
-        $this->user = $value;
+    public function setUser(int $value) {
+        $this->sellerID = $value;
     }
 	
 }
