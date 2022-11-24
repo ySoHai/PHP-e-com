@@ -1,4 +1,11 @@
-<?php require_once('header.php'); ?>
+<?php
+	require_once('header.php');
+	require_once('../Models/database.php');
+	require_once('../Models/category.php');
+	require_once('../Models/category_db.php');
+	$catDB = new CategoryDB();
+	$cats = $catDB->get_categories();
+?>
       <!-- banner -->
       <section class="banner_main">
          <div id="banner1" class="carousel slide" data-ride="carousel">
@@ -95,60 +102,15 @@
                <div class="col-md-12">
                   <div class="our_products">
                      <div class="row">
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="<?php echo $app_path; ?>images/product1.png" alt="#"/></figure>
-                              <h3>Computer</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="<?php echo $app_path; ?>images/product2.png" alt="#"/></figure>
-                              <h3>Laptop</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="<?php echo $app_path; ?>images/product3.png" alt="#"/></figure>
-                              <h3>Tablet</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="<?php echo $app_path; ?>images/product4.png" alt="#"/></figure>
-                              <h3>Speakers</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="<?php echo $app_path; ?>images/product5.png" alt="#"/></figure>
-                              <h3>internet</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="<?php echo $app_path; ?>images/product6.png" alt="#"/></figure>
-                              <h3>Hardisk</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                           <div class="product_box">
-                              <figure><img src="<?php echo $app_path; ?>images/product7.png" alt="#"/></figure>
-                              <h3>Rams</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                           <div class="product_box">
-                              <figure><img src="<?php echo $app_path; ?>images/product8.png" alt="#"/></figure>
-                              <h3>Bettery</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                           <div class="product_box">
-                              <figure><img src="<?php echo $app_path; ?>images/product9.png" alt="#"/></figure>
-                              <h3>Drive</h3>
-                           </div>
-                        </div>
+						<?php
+							foreach ($cats as $cat) {
+								echo '<div class="col-md-4 margin_bottom1"><a href="product.php?cat='.$cat->getID().'">
+								   <div class="product_box">
+									  <h3>'.$cat->getDescription().'</h3>
+								   </div></a>
+								</div>';
+							}
+						?>
                      </div>
                   </div>
                </div>
