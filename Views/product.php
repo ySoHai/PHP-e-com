@@ -4,7 +4,7 @@
 	require_once('../Models/product.php');
 	require_once('../Models/product_db.php');
 	$productDB = new ProductDB();
-	$products = $productDB->get_products();
+	$products = $productDB->get_active_products();
 ?>
       <!-- products -->
       <div  class="products">
