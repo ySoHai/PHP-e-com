@@ -9,7 +9,7 @@
 	else $products = ProductDB::get_active_products();
 ?>
       <!-- products -->
-      <div  class="products">
+      <div  class="products" style="margin-top: 0px;">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
