@@ -81,7 +81,7 @@
             $statement->execute();
             $userId = $statement->fetch();
             $statement->closeCursor();
-            return $userId;
+            return $userId['userID'];
 
         } catch (PDOException $e) {
             Database::displayError($e->getMessage());
