@@ -7,15 +7,15 @@
                   <div class="titlepage">
                      <h2>My Orders</h2>
                   </div>
-                  <table>
-                     <tr>
-                        <th>Ordered Date</th>
-                        <th>Order ID</th>
-                        <th>Total</th>
+                  <table class="table">
+                     <tr class="thead-dark">
+                        <th scope="col">Order ID</th>
+                        <th scope="col">Ordered Date</th>
+                        <th scope="col">Total</th>
                      </tr>
                      <tr>
-                        <td>test</td>
                         <td>1111</td>
+                        <td>test</td>
                         <td>$ 1,230</td>
                      </tr>
                   </table>
