@@ -42,13 +42,13 @@ if(isset($_SESSION['userId'])){
                            <div class="col-md-6">
                               <div class="box_text">
                                  <li class="nav-item">
-                                    <a class="nav-link h3" href="addlisting.php"><b>List An item</b></a>
+                                    <a class="nav-link h2" href="addlisting.php"><b>List An item</b></a>
                                  </li>
                                  <li class="nav-item">   
-                                    <a class="nav-link h3" href="listing.php"><b>My Listings</b></a>
+                                    <a class="nav-link h2" href="listing.php"><b>My Listings</b></a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link h3" href="order.php"><b>My Orders</b></a>
+                                    <a class="nav-link h2" href="order.php"><b>My Orders</b></a>
                                  </li>
                               </div>
                            </div>
