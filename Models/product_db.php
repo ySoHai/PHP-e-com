@@ -121,31 +121,27 @@ class ProductDB {
         }
     }
     
-    public static function addProduct($product) {
+    public static function addProduct($prodName, $prodDesc, $price, $quantity, $quality, $shipDays, $categoryID, $sellerID) {
         $db = Database::getDB();
         $query = 'INSERT INTO products
-                    (productID, name, description, price, 
+                    (name, description, price, 
                      quantity, quality_new, ship_days, categoryID, sellerID)
                  VALUES
-                    (:product_id, :name, :description, :price, 
+                    (:name, :description, :price, 
                      :quantity, :quality_new, :ship_days, :category_id, :seller_id)';
        try {
             $statement = $db->prepare($query);
-            $statement->bindValue(':name', $product->getName());
-            $statement->bindValue(':description', $product->getDescription());
-            $statement->bindValue(':price', $product->getPrice());
-            $statement->bindValue(':quantity', $product->getQuantity());
-            $statement->bindValue(':quality_new', $product->getQuality());
-            $statement->bindValue(':ship_days', $product->getShip_days());
-            $statement->bindValue(':category_id', 
-                   $product->getCategory()->getID());
-            $statement->bindValue(':seller_id', 
-                   $product->getUser()->getUserID());
+            $statement->bindValue(':name', $prodName);
+            $statement->bindValue(':description', $prodDesc);
+            $statement->bindValue(':price', $price);
+            $statement->bindValue(':quantity', $quantity);
+            $statement->bindValue(':quality_new', $quality);
+            $statement->bindValue(':ship_days', $shipDays);
+            $statement->bindValue(':category_id', $categoryID);
+            $statement->bindValue(':seller_id', $sellerID);
             $statement->execute();
             $statement->closeCursor();
-
-           // Get the last product ID that was automatically generated
-            return $db->lastInsertId();
+            
        } catch (PDOException $e) {
             Database::displayError($e->getMessage());
        }
