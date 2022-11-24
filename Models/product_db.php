@@ -63,12 +63,10 @@ class ProductDB {
     }
     
     public static function get_product_by_category($category_id) {
-        $db = Database::getDB();
-        $category = CategoryDB::getCategory($category_id);
+		$db = Database::getDB();
         $query = 'SELECT productID, name, description, price, 
                      quantity, quality_new, ship_days, categoryID, sellerID 
-                  FROM products
-                  WHERE categoryID = :category_id
+                  FROM products WHERE quantity >= 1 AND categoryID = :category_id
                   ORDER BY productID';
         try {
             $statement = $db->prepare($query);
@@ -80,7 +78,15 @@ class ProductDB {
             
             $products = [];
             foreach ($rows as $row) {
-                $products[] = self::loadProduct($row);
+                $products[] = new Product($row['productID'],
+                                            $row['name'],
+                                            $row['description'],
+                                            $row['price'],
+                                            $row['quantity'],
+                                            $row['quality_new'],
+                                            $row['ship_days'],
+                                            $row['categoryID'],
+                                            $row['sellerID']);
             }
             return $products;
         } catch (PDOException $e) {

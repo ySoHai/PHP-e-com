@@ -3,8 +3,7 @@
 	require_once('../Models/database.php');
 	require_once('../Models/category.php');
 	require_once('../Models/category_db.php');
-	$catDB = new CategoryDB();
-	$cats = $catDB->get_categories();
+	$cats = CategoryDB::get_categories();
 ?>
       <!-- banner -->
       <section class="banner_main">
