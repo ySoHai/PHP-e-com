@@ -2,8 +2,11 @@
 require_once ('../Models/user_class.php');
 require_once('../Models/database.php');
 
-$user = new User((int)$_SESSION['userId']);
-
+if(isset($_SESSION['userId'])){
+   $user = new User((int)$_SESSION['userId']);
+}else{
+   echo '<script>alert("Please try again!");</script>';
+}
 
 
 ?>
