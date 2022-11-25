@@ -15,7 +15,7 @@
             </div>
             <div class="row">
                <div class="col-md-10 offset-md-1">
-			   <?php if (!empty($error_listing)) echo '<p>'.$error_listing.'</p>'; ?>
+			   <?php if (isset($error_listing)&&$error_listing) echo '<script>alert("Please try again!");</script>'; ?>
                   <form id="request" class="main_form" method="post" action="../Controllers/list.php">
                      <div class="row">
                         <div class="col-md-12 ">
@@ -25,10 +25,10 @@
                            <input class="contactus" placeholder="Enter Product Description" type="type" name="prodDesc" required> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="List Price" type="number" name="price" min=1 required> 
+                           <input class="contactus" placeholder="List Price" type="number" name="price" min="1" required> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Sale Quantity" type="number" name="quantity" min=1 required> 
+                           <input class="contactus" placeholder="Sale Quantity" type="number" name="quantity" min="1" required> 
                         </div>
                         <div class="col-md-12">
                            <label for="New" style="color:white;font-size:1.2rem;line-height:1.1;display:grid;grid-template-columns:1em auto;gap:0.5em;">New</label>
@@ -37,13 +37,13 @@
                            <input id="Used" class="contactus" type="radio" name="quality" value="0" checked style="width:1.15em;height:1.15em;border-radius:50%;">
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Enter Days to Ship" type="number" name="shipDays" min=1 required> 
+                           <input class="contactus" placeholder="Enter Days to Ship" type="number" name="shipDays" min="1" required> 
                         </div>
                         <div class="col-md-12">
                            <label for="Category" style="color:white; font-size:1.2em;">Category</label>
                            <select class="contactus" id="Category" name="category" required>
                               <?php foreach($categories as $category) : ?>
-                                 <option value=<?php echo $category->getID(); ?> style="color:black;">
+                                 <option value="<?php echo $category->getID(); ?>" style="color:black;">
                                        <?php echo $category->getDescription(); ?>
                                  </option>
                               <?php endforeach; ?>
