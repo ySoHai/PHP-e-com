@@ -43,7 +43,7 @@
                                  <span>TechTrade</span>
                                  <h1>Buy</h1>
                                  <p>Get great items for the best price!</p>
-                                 <a href="product.php">Login</a>
+                                 <a href="product.php">Listings</a>
                               </div>
                            </div>
                            <div class="col-md-6">

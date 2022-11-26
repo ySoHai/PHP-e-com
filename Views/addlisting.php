@@ -1,8 +1,17 @@
-<?php require_once('header.php');
-      require_once('../Models/database.php');
-      require_once('../Models/category_db.php');
-      require_once('../Models/category.php');
-      $categories = CategoryDB::get_categories(); ?>
+<?php 
+session_start();
+
+if(!isset($_SESSION['userId'])){
+	header("Location: ./login.php");
+	die('Something went very wrong :(');
+}
+
+require_once('header.php');
+require_once('../Models/database.php');
+require_once('../Models/category_db.php');
+require_once('../Models/category.php');
+$categories = CategoryDB::get_categories();
+?>
       <!--  add listing -->
       <div class="contact">
          <div class="container">

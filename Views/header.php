@@ -85,9 +85,6 @@ if (session_status() === PHP_SESSION_NONE) {
                               <li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=='product.php') echo 'active';?>">
                                  <a class="nav-link" href="<?php echo $app_path; ?>product.php">Listings</a>
                               </li>
-                              <li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=='contact.php') echo 'active';?>">
-                                 <a class="nav-link" href="<?php echo $app_path; ?>contact.php">Contact</a>
-                              </li>
                               <?php
                               if (!empty($_SESSION['userId'])) {
                                  echo '<li class="nav-item">

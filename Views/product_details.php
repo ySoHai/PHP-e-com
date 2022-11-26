@@ -12,11 +12,11 @@
                <div class="col-md-5">
                   <div class="titlepage">
                      <h2><?php echo $product->getName(); ?></h2>
-                     <h4><b><?php echo 'Price: ' . '$' . $product->getPrice() . ' (' . $product->getQualityS() . ')'; ?></b></h4>
-                     <p><b>Description: </b><?php echo $product->getDescription(); ?></p>
-					 <p><b>Quantity: </b><?php echo $product->getQuantity() . ' available'; ?></b></p>
-                     <p><b>Expected ship date: </b><?php echo date('Y-m-d', strtotime($date. ' + '.$product->getShip_days().' days')); ?></p>
-                     <a class="read_more" href="">Add to cart</a> <a class="read_more" href="product.php">Show Listings</a>
+                     <p><b>Price: </b><?php echo '$' . $product->getPrice() . ' (' . $product->getQualityS() . ')'; ?><br>
+                     <b>Description: </b><?php echo $product->getDescription(); ?><br>
+					 <b>Quantity: </b><?php echo $product->getQuantity() . ' available'; ?><br>
+                     <b>Expected ship date: </b><?php echo date('Y-m-d', strtotime($date. ' + '.$product->getShip_days().' days')); ?></p>
+                     <?php if ($product->getQuantity()>=1) echo '<a class="read_more" href="">Add to cart</a><br><br>';?><a class="read_more" style="background-color: transparent; border: #48ca95 solid 2px; color: #48ca95!important;" href="product.php">Show Listings</a>
                   </div>
                </div>
                <div class="col-md-7">
