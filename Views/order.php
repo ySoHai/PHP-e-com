@@ -44,7 +44,7 @@ error_reporting(E_ALL);
 							echo '<tr>
                            <td>'. $order->getOrderId .'</td>
                            <td>'. $order->getOrderDate .'</td>
-                           <td>'. $order->getGrandTotal .'</td>
+                           <td> $'. $order->getGrandTotal .'</td>
                            </tr>';
 							}
 						}
