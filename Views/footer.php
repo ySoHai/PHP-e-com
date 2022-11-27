@@ -11,7 +11,7 @@ $app_path = '/' . $dirs[1] . '/Views/';
                 <div class="col-6">
                     <h3>About Us</h3>
                     <ul class="about_us">
-                    <li>Website of a Advanced Web Development Project</li>
+                    <li>Website of a Advanced Web Development Project.</li>
                     </ul>
                 </div>
                 <div class="col-6">

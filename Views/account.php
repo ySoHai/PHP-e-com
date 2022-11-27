@@ -22,7 +22,7 @@ $user = new User((int)$_SESSION['userId']);
                </div>
             </div>
             <div class="row">
-               <div class="col-md-10 offset-md-1">
+               <div class="col-md-10 offset-md-1" style="margin-bottom: 15px;">
                   <div class="three_box">
                      <div class="container">
                         <div class="row">

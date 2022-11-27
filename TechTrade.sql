@@ -17,7 +17,7 @@ CREATE TABLE users (
 INSERT INTO `users` (`userID`, `email`, `phone`, `address`, `name_first`, `name_last`, `password`) VALUES
 (1, 'john@miller.com', NULL, '100 St 1598, Z5G35G Downtown, USA', 'John', 'Miller', 'spdi##d54153'),
 (2, 'maria@miller.com', '15856135', '100 St 1598, Z5G35G Downtown, USA', 'Maria', 'Miller', '555'),
-(3, 'mike@gmail.com', '+141589135', '155 St 1598 #5, Z5G35G Surrey, Canada', 'Mike', 'Mayer-Hava', 'dsl$§%§f%wf');
+(3, 'mike@gmail.com', '+141589135', '155 St 1598 #5, Z5G35G Surrey, Canada', 'Mike', 'Mayer-Hava', 'test');
 
 CREATE TABLE categories (
     categoryID  INT         NOT NULL    AUTO_INCREMENT,

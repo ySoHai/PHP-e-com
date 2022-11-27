@@ -18,20 +18,20 @@ $categories = CategoryDB::get_categories();
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Add an Item</h2>
+                     <h2>Add Listing</h2>
                   </div>
                </div>
             </div>
             <div class="row">
-               <div class="col-md-10 offset-md-1">
+               <div class="col-md-10 offset-md-1" style="margin-bottom: 15px;">
 			   <?php if (isset($error_listing)&&$error_listing) echo '<script>alert("Please try again!");</script>'; ?>
                   <form id="request" class="main_form" method="post" action="../Controllers/list.php">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Enter Product Name" type="type" name="prodName" required> 
+                           <input class="contactus" placeholder="Product Name" type="type" name="prodName" required> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Enter Product Description" type="type" name="prodDesc" required> 
+                           <input class="contactus" placeholder="Product Description" type="type" name="prodDesc" required> 
                         </div>
                         <div class="col-md-12">
                            <input class="contactus" placeholder="List Price" type="number" name="price" min="1" required> 
@@ -46,7 +46,7 @@ $categories = CategoryDB::get_categories();
                            <input id="Used" class="contactus" type="radio" name="quality" value="0" checked style="width:1.15em;height:1.15em;border-radius:50%;">
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Enter Days to Ship" type="number" name="shipDays" min="1" required> 
+                           <input class="contactus" placeholder="Days to Ship" type="number" name="shipDays" min="1" required> 
                         </div>
                         <div class="col-md-12">
                            <label for="Category" style="color:white; font-size:1.2em;">Category</label>
