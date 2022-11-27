@@ -10,6 +10,7 @@ if (validateLogin($_POST['email'], $_POST['password'])) {
 		session_start();
 	 }
 	$_SESSION['userId'] = getUserId($_POST['email']);
+	$_SESSION['cart'][]=array(1,2,);
 	header('Location: ../index.php');
 	
 }

@@ -101,7 +101,11 @@ if (session_status() === PHP_SESSION_NONE) {
                                           <a class="nav-link" href="' . $app_path . 'signup.php">Sign up</a>
                                        </li>';  
                               }
-
+							  if (!empty($_SESSION['cart'])) {
+                                 echo '<li class="nav-item">
+                                          <a class="nav-link" href="'. $app_path .'cart.php">Cart ('.count($_SESSION['cart']).')</a>
+                                       </li>';
+                              }
                               ?>
 
                            </ul>
