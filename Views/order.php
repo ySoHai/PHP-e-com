@@ -8,7 +8,7 @@
       session_start();
     }
    
-   if(OrderDB::orders_exist($_SESSION['userId')){
+   if(OrderDB::orders_exist($_SESSION['userId'])){
       $orders = OrderDB::get_orders($_SESSION['userId']);
    }else{
       $orders = false;
