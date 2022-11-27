@@ -4,13 +4,21 @@ class Order{
     private int $orderId;
     private DateTime $orderDate;
     private float $grandTotal;
+    //private array $array =[];
 
-    public function __construct(int $userId) {
+    public function __construct(int $orderId, int $userId, DateTime $order_date,float $grandTotal) {
+        $this->orderId = $orderId;
         $this->userId = $userId;
+        $this->orderDate = $order_date;
+        $this->grandTotal = $grandTotal;
 	}
 
     public function getOrderId() {
         return $this->orderId;
+    }
+
+    public function getUserId() {
+        return $this->userId;
     }
 
     public function getOrderDate() {
@@ -20,6 +28,22 @@ class Order{
         return $this->grandTotal;
     }
     
+    public function setOrderId(int $value) {
+        $this->orderId = $value;
+    }
+
+    public function setUserId(int $value) {
+        $this->orderId = $value;
+    }
+
+    public function setOrderDate(DateTime $value) {
+        $this->orderDate = $value;
+    }
+
+    public function setGrandTotal(float $value) {
+        $this->grandTotal = $value;
+    }
+
     
 }
 

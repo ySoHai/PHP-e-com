@@ -1,4 +1,15 @@
-<?php require_once('header.php'); ?>
+<?php 
+   require_once('header.php'); 
+	require_once('../Models/database.php');
+	require_once('../Models/order.php');
+	require_once('../Models/order_db.php');
+   //require_once('../Models/order_item.php');
+   if (session_status() === PHP_SESSION_NONE) {
+      session_start();
+    }
+
+   $orders = OrderDB::get_orders($_SESSION['userId']);
+?>
       <!--  orders -->
       <div class="contact">
          <div class="container">
@@ -13,11 +24,24 @@
                         <th scope="col">Ordered Date</th>
                         <th scope="col">Total</th>
                      </tr>
-                     <tr>
-                        <td>1111</td>
-                        <td>test</td>
-                        <td>$ 1,230</td>
-                     </tr>
+                     <?php
+						if (empty($orders)) {
+							echo '<tr>
+                           <td>NO </td>
+                           <td>ORDERS</td>
+                           <td>MADE</td>
+                           </tr>';
+						}
+						else {
+							foreach ($orders as $order) {
+							echo '<tr>
+                           <td>'. $order->getOrderId .'</td>
+                           <td>'. $order->getOrderDate .'</td>
+                           <td>'. $order->getGrandTotal .'</td>
+                           </tr>';
+							}
+						}
+					  ?>
                   </table>
                </div>
             </div>
