@@ -7,8 +7,12 @@
    if (session_status() === PHP_SESSION_NONE) {
       session_start();
     }
-
-   $orders = OrderDB::get_orders($_SESSION['userId']);
+   
+   if(OrderDB::orders_exist($_SESSION['userId')){
+      $orders = OrderDB::get_orders($_SESSION['userId']);
+   }else{
+      $orders = false;
+   }
 ?>
       <!--  orders -->
       <div class="contact">
@@ -25,7 +29,7 @@
                         <th scope="col">Total</th>
                      </tr>
                      <?php
-						if (empty($orders)) {
+						if ($orders == false) {
 							echo '<tr>
                            <td>NO </td>
                            <td>ORDERS</td>
