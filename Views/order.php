@@ -7,9 +7,6 @@ error_reporting(E_ALL);
 	require_once('../Models/order.php');
 	require_once('../Models/order_db.php');
    //require_once('../Models/order_item.php');
-   if (session_status() === PHP_SESSION_NONE) {
-      session_start();
-    }
    
    if(OrderDB::orders_exist($_SESSION['userId'])){
       $orders = OrderDB::get_orders($_SESSION['userId']);

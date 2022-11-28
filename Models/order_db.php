@@ -8,8 +8,8 @@ class OrderDB {
                   ORDER BY orderID';
         try {
             $statement = $db->prepare($query);
-            $statement->execute();
             $statement->bindValue(':userID', $userID);
+            $statement->execute();
             $rows = $statement->fetchAll();
             $statement->closeCursor();
             
@@ -34,8 +34,8 @@ class OrderDB {
                   ORDER BY orderID';
         try {
             $statement = $db->prepare($query);
-            $statement->execute();
             $statement->bindValue(':userID', $userID);
+            $statement->execute();
             $result = $statement->fetchAll();
             $statement->closeCursor();
             
