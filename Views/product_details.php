@@ -16,7 +16,7 @@
                      <b>Description: </b><?php echo $product->getDescription(); ?><br>
 					 <b>Quantity: </b><?php echo $product->getQuantity() . ' available'; ?><br>
                      <b>Expected ship date: </b><?php echo date('Y-m-d', strtotime($date. ' + '.$product->getShip_days().' days')); ?></p>
-                     <?php if ($product->getQuantity()>=1) echo '<a class="read_more" href="">Add to cart</a><br><br>';?><a class="read_more" style="background-color: transparent; border: #48ca95 solid 2px; color: #48ca95!important;" href="product.php">Show Listings</a>
+                     <?php if ($product->getQuantity()>=1) echo '<a class="read_more" href="../Controllers/cart.php?action=add&item='.$_GET['id'].'&quantity=1">Add to cart</a><br><br>';?><a class="read_more" style="background-color: transparent; border: #48ca95 solid 2px; color: #48ca95!important;" href="product.php">Show Listings</a>
                   </div>
                </div>
                <div class="col-md-7">

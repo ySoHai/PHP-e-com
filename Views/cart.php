@@ -1,4 +1,10 @@
-<?php require_once('header.php'); ?>
+<?php
+require_once('header.php'); 
+require_once('../Models/database.php');
+require_once('../Models/product.php');
+require_once('../Models/product_db.php');
+$date = date("Y/m/d");
+?>
       <!--  orders -->
       <div class="contact">
          <div class="container">
@@ -11,11 +17,25 @@
                      <tr class="thead-dark">
                         <th scope="col">Item</th>
                         <th scope="col">Quantity</th>
+                        <th scope="col"></th>
                      </tr>
-                     <tr>
-                        <td>1111</td>
-                        <td>test</td>
-                     </tr>
+					 <?php
+					 if (empty($_SESSION['cart'])) {
+						echo '<tr>
+							   <td colspan="3" style="vertical-align: middle;">NO ITEMS</td>
+							   </tr>';
+					 }
+					 else {
+						foreach ($_SESSION['cart'] as $index => $item) {
+							$product = ProductDB::get_product_by_id($item[0]);
+							echo '<tr>
+							   <td style="vertical-align: middle;">'. $product->getName() .'</td>
+							   <td style="vertical-align: middle;">'. $item[1] .'</td>
+							   <td style="vertical-align: middle;"><a class="read_more" href="../Controllers/cart.php?action=remove&index='.$index.'">Remove</a></td>
+							   </tr>';
+						}
+					 }
+					 ?>
                   </table>
                </div>
             </div>
