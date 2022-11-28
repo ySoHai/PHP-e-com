@@ -46,7 +46,7 @@ class OrderDB {
             }
             
         } catch (PDOException $e) {
-            Database::displayError($e->getMessage());
+            return false;
         }
     }
 
