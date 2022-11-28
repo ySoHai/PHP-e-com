@@ -17,9 +17,11 @@ $date = date("Y/m/d");
                      <tr class="thead-dark">
                         <th scope="col">Item</th>
                         <th scope="col">Quantity</th>
+                        <th scope="col">Price</th>
                         <th scope="col"></th>
                      </tr>
 					 <?php
+					 $price = 0;
 					 if (empty($_SESSION['cart'])) {
 						echo '<tr>
 							   <td colspan="3" style="vertical-align: middle;">NO ITEMS</td>
@@ -28,14 +30,20 @@ $date = date("Y/m/d");
 					 else {
 						foreach ($_SESSION['cart'] as $index => $item) {
 							$product = ProductDB::get_product_by_id($item[0]);
+							$price += $product->getPrice();
 							echo '<tr>
 							   <td style="vertical-align: middle;">'. $product->getName() .'</td>
 							   <td style="vertical-align: middle;">'. $item[1] .'</td>
+							   <td style="vertical-align: middle;">'. $product->getPrice().'</td>
 							   <td style="vertical-align: middle;"><a class="read_more" href="../Controllers/cart.php?action=remove&index='.$index.'">Remove</a></td>
 							   </tr>';
 						}
 					 }
 					 ?>
+					    <tr class="thead-dark">
+					       <th scope="col" colspan="2">Subtotal</th>
+					       <th scope="col"><?php echo $price ?></th>
+					    </tr>
                   </table>
                </div>
             </div>
