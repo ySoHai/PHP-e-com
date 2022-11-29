@@ -37,7 +37,7 @@ $date = date("Y/m/d");
 							   <td style="vertical-align: middle;">'. $item[1] .'</td>
 							   <td style="vertical-align: middle;">'. date('Y-m-d', strtotime($date. ' + '.$product->getShip_days().' days')).'</td>
 							   <td style="vertical-align: middle;">$'. $product->getPrice().'</td>
-							   <td style="vertical-align: middle;"><a class="read_more" href="../Controllers/cart.php?action=remove&index='.$index.'">Remove</a></td>
+							   <td style="vertical-align: middle;"><a class="read_more" style="background-color: transparent; border: #48ca95 solid 2px; color: #48ca95!important;" href="../Controllers/cart.php?action=remove&index='.$index.'">Remove</a></td>
 							   </tr>';
 						}
 					 }
