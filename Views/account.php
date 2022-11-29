@@ -42,15 +42,9 @@ $user = new User((int)$_SESSION['userId']);
                            </div>
                            <div class="col-md-6">
                               <div class="box_text">
-                                 <li class="nav-item">
-                                    <a class="nav-link h2" href="addlisting.php"><b>List An item</b></a>
-                                 </li>
-                                 <li class="nav-item">   
-                                    <a class="nav-link h2" href="listing.php"><b>My Listings</b></a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link h2" href="order.php"><b>My Orders</b></a>
-                                 </li>
+                                 <a class="read_more" href="addlisting.php">List An item</a><br><br>
+                                 <a class="read_more" href="listing.php">My Listings</a><br><br>
+                                 <a class="read_more" href="order.php">My Orders</a>
                               </div>
                            </div>
                         </div>

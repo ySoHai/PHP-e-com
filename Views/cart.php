@@ -17,6 +17,7 @@ $date = date("Y/m/d");
                      <tr class="thead-dark">
                         <th scope="col">Item</th>
                         <th scope="col">Quantity</th>
+						<th scope="col">Expected ship date</th>
                         <th scope="col">Price</th>
                         <th scope="col"></th>
                      </tr>
@@ -24,7 +25,7 @@ $date = date("Y/m/d");
 					 $price = 0;
 					 if (empty($_SESSION['cart'])) {
 						echo '<tr>
-							   <td colspan="3" style="vertical-align: middle;">NO ITEMS</td>
+							   <td colspan="5" style="vertical-align: middle;">NO ITEMS</td>
 							   </tr>';
 					 }
 					 else {
@@ -34,15 +35,19 @@ $date = date("Y/m/d");
 							echo '<tr>
 							   <td style="vertical-align: middle;">'. $product->getName() .'</td>
 							   <td style="vertical-align: middle;">'. $item[1] .'</td>
-							   <td style="vertical-align: middle;">'. $product->getPrice().'</td>
+							   <td style="vertical-align: middle;">'. date('Y-m-d', strtotime($date. ' + '.$product->getShip_days().' days')).'</td>
+							   <td style="vertical-align: middle;">$'. $product->getPrice().'</td>
 							   <td style="vertical-align: middle;"><a class="read_more" href="../Controllers/cart.php?action=remove&index='.$index.'">Remove</a></td>
 							   </tr>';
 						}
 					 }
 					 ?>
 					    <tr class="thead-dark">
-					       <th scope="col" colspan="2">Subtotal</th>
-					       <th scope="col"><?php echo $price ?></th>
+					       <th scope="col" style="vertical-align: middle;">Subtotal</th>
+						   <th scope="col" style="vertical-align: middle;"></th>
+						   <th scope="col" style="vertical-align: middle;"></th>
+					       <th scope="col" style="vertical-align: middle;">$<?php echo $price ?></th>
+						   <th scope="col" style="vertical-align: middle;"><a class="read_more" href="../Controllers/cart.php?action=order">Place order</a></th>
 					    </tr>
                   </table>
                </div>

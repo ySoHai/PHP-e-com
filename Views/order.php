@@ -31,9 +31,7 @@ error_reporting(E_ALL);
                      <?php
 						if ($orders == false) {
 							echo '<tr>
-                           <td>NO </td>
-                           <td>ORDERS</td>
-                           <td>MADE</td>
+                           <td colspan="3">NO ORDERS</td>
                            </tr>';
 						}
 						else {
