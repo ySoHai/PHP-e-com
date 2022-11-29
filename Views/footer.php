@@ -17,7 +17,7 @@ $app_path = '/' . $dirs[1] . '/Views/';
                 <div class="col-6">
                     <h3>Contact Us</h3>
                     <ul class="conta">
-                    <li>Send us an Email:<br>contact@techtrade.com</li>
+                    <li>contact@techtrade.com</li>
                     </ul>
                 </div>
             </div>
