@@ -31,6 +31,7 @@ else if ($action=='add'&&isset($_GET['item'])) {
 else if ($action=='order') {
 	$date = date("Y/m/d");
 	OrderDB::add_order($_SESSION['userId'], $date, $_GET['grand_total']);
+	unset($_SESSION['cart']);
 	
 	header('Location: ../Views/account.php');
 }
