@@ -28,7 +28,15 @@ $date = date("Y/m/d");
 					 if (empty($_SESSION['cart'])) {
 						echo '<tr>
 							   <td colspan="5" style="vertical-align: middle;">NO ITEMS</td>
-							   </tr>';
+							   </tr>
+							   
+							   <tr class="thead-dark">
+					  			<th scope="col" style="vertical-align: middle;">Total</th>
+						   <th scope="col" style="vertical-align: middle;">'.$total.'</th>
+						   <th scope="col" style="vertical-align: middle;"></th>
+					       <th scope="col" style="vertical-align: middle;">$'.$price.'</th>
+					       <th scope="col" style="vertical-align: middle;"></th>
+					       </tr>';
 					 }
 					 else {
 						foreach ($_SESSION['cart'] as $index => $item) {
@@ -43,15 +51,16 @@ $date = date("Y/m/d");
 							   <td style="vertical-align: middle;"><a class="read_more" style="background-color: transparent; border: #48ca95 solid 2px; color: #48ca95!important;" href="../Controllers/cart.php?action=remove&index='.$index.'">Remove</a></td>
 							   </tr>';
 						}
-					 }
-					 ?>
-					    <tr class="thead-dark">
-					       <th scope="col" style="vertical-align: middle;">Total</th>
-						   <th scope="col" style="vertical-align: middle;"><?php echo $total?></th>
+						
+						echo '<tr class="thead-dark">
+					  			<th scope="col" style="vertical-align: middle;">Total</th>
+						   <th scope="col" style="vertical-align: middle;">'.$total.'</th>
 						   <th scope="col" style="vertical-align: middle;"></th>
-					       <th scope="col" style="vertical-align: middle;">$<?php echo $price ?></th>
-						   <th scope="col" style="vertical-align: middle;"><a class="read_more" href="../Controllers/cart.php?action=order&grand_total="<?php echo $price ?>"">Place order</a></th>
-					    </tr>
+					       <th scope="col" style="vertical-align: middle;">$'.$price.'</th>
+					       <th scope="col" style="vertical-align: middle;"><a class="read_more" href="../Controllers/cart.php?action=order&grand_total='.$price.'">Place order</a></th>
+					       </tr>';
+					 }
+					?>
                   </table>
                </div>
             </div>
