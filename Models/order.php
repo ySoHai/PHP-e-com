@@ -6,10 +6,10 @@ class Order{
     private float $grandTotal;
     //private array $array =[];
 
-    public function __construct(int $orderId, int $userId, string $order_date, float $grandTotal) {
+    public function __construct(int $orderId, int $userId, string $orderDate, float $grandTotal) {
         $this->orderId = $orderId;
         $this->userId = $userId;
-        $this->orderDate = $order_date;
+        $this->orderDate = $orderDate;
         $this->grandTotal = $grandTotal;
 	}
 

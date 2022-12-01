@@ -71,10 +71,9 @@ class OrderDB {
 
     public static function orders_exist($userID) {
         $db = Database::getDB();
-        $query = 'SELECT *
+        $query = 'SELECT orderID
                   FROM orders
-                  WHERE userID = :userID
-                  ORDER BY orderID';
+                  WHERE userID = :userID';
         try {
             $statement = $db->prepare($query);
             $statement->bindValue(':userID', $userID);
@@ -82,7 +81,7 @@ class OrderDB {
             $result = $statement->fetchAll();
             $statement->closeCursor();
             
-            if (empty($result)) {
+            if ($result['num_rows'] < 0) {
                 return false;
             } else {
                 return true;
