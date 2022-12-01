@@ -47,6 +47,9 @@ error_reporting(E_ALL);
 						}
 					  ?>
                   </table>
+                  <?php echo OrderDB::orders_exist($_SESSION['userId']);
+                  
+                  ?>
                </div>
             </div>
         </div>

@@ -78,10 +78,10 @@ class OrderDB {
             $statement = $db->prepare($query);
             $statement->bindValue(':userID', $userID);
             $statement->execute();
-            $result = $statement->fetchAll();
+            $result = $statement->fetch();
             $statement->closeCursor();
             
-            if ($result == null ) {
+            if ($result == false) {
                 return false;
             } else {
                 return true;
