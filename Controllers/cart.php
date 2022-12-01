@@ -31,6 +31,12 @@ else if ($action=='add'&&isset($_GET['item'])) {
 else if ($action=='order') {
 	$date = date("Y/m/d");
 	OrderDB::add_order($_SESSION['userId'], $date, $_GET['grand_total']);
+	$order = OrderDB::get_last_order();
+	
+	foreach ($_SESSION['cart'] as $index => $item) {
+		$product = ProductDB::get_product_by_id($item[0]);
+		OrderDB::set_order_items($order['orderID'], $product->getID(), $item[1], $product->getPrice());
+	}
 	unset($_SESSION['cart']);
 	
 	header('Location: ../Views/account.php');

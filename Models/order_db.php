@@ -68,6 +68,22 @@ class OrderDB {
             Database::displayError($e->getMessage());
         }
     }
+    
+    public static function get_last_order() {
+        $db = Database::getDB();
+        $query = 'SELECT * FROM orders
+                  ORDER BY orderID DESC LIMIT 1';
+        try {
+            $statement = $db->prepare($query);
+            $statement->execute();
+            $order = $statement->fetch();
+            $statement->closeCursor();
+            
+            return $order;
+        } catch (PDOException $e) {
+            Database::displayError($e->getMessage());
+        }
+    }
 
     public static function orders_exist($userID) {
         $db = Database::getDB();
@@ -103,6 +119,26 @@ class OrderDB {
             $statement->bindValue(':userID', $userID);
             $statement->bindValue(':order_date', $orderDate);
             $statement->bindValue(':grand_total', $grandTotal);
+            $statement->execute();
+            $statement->closeCursor();
+            
+        } catch (PDOException $e) {
+            Database::displayError($e->getMessage());
+        }
+    }
+    
+    public static function set_order_items($orderID,$productID,$amount,$price) {
+        $db = Database::getDB();
+        $query = 'INSERT into order_items 
+                    (orderID,productID,amount,total)
+                  VALUES
+                    (:orderID,:productID,:amount,:total)';
+        try {
+            $statement = $db->prepare($query);
+            $statement->bindValue(':orderID', $orderID);
+            $statement->bindValue(':productID', $productID);
+            $statement->bindValue(':amount', $amount);
+            $statement->bindValue(':price', $price);
             $statement->execute();
             $statement->closeCursor();
             
