@@ -36,6 +36,9 @@ else if ($action=='order') {
 	foreach ($_SESSION['cart'] as $index => $item) {
 		$product = ProductDB::get_product_by_id($item[0]);
 		OrderDB::set_order_items($order['orderID'], $product->getID(), $item[1], $product->getPrice());
+		$newQuantity = $product->getQuantity() - $item[1];
+		$product->setQuantity($newQuantity);
+		ProductDB::updateProduct($product);
 	}
 	unset($_SESSION['cart']);
 	
