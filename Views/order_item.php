@@ -1,14 +1,18 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-   require_once('header.php'); 
-   require_once('../Models/database.php');
-   require_once('../Models/order_item.php');
-   require_once('../Models/order_db.php');
-   require_once('../Models/product_db.php');
-   require_once('../Models/product.php');
-   $order_items = OrderDB::get_order_items($_GET['orderID']);
+session_start();
+
+if(!isset($_SESSION['userId'])){
+	header("Location: ./login.php");
+	die('Something went very wrong :(');
+}
+
+require_once('header.php'); 
+require_once('../Models/database.php');
+require_once('../Models/order_item.php');
+require_once('../Models/order_db.php');
+require_once('../Models/product_db.php');
+require_once('../Models/product.php');
+$order_items = OrderDB::get_order_items($_GET['orderID']);
 ?>
       <!--  orders -->
       <div class="contact">
@@ -47,6 +51,7 @@ error_reporting(E_ALL);
 					       <th scope="col" style="vertical-align: middle;">$<?php echo $total ?></th>
 					    </tr>
                   </table>
+				  <a class="read_more" href="order.php">Return</a><br><br>
                </div>
             </div>
         </div>

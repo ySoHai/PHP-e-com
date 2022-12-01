@@ -1,18 +1,22 @@
 <?php 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-   require_once('header.php'); 
-	require_once('../Models/database.php');
-	require_once('../Models/order.php');
-	require_once('../Models/order_db.php');
-   //require_once('../Models/order_item.php');
-   
-   if(OrderDB::orders_exist($_SESSION['userId'])){
-      $orders = OrderDB::get_orders($_SESSION['userId']);
-   }else{
-      $orders = false;
-   }
+session_start();
+
+if(!isset($_SESSION['userId'])){
+	header("Location: ./login.php");
+	die('Something went very wrong :(');
+}
+
+require_once('header.php'); 
+require_once('../Models/database.php');
+require_once('../Models/order.php');
+require_once('../Models/order_db.php');
+//require_once('../Models/order_item.php');
+
+if(OrderDB::orders_exist($_SESSION['userId'])){
+  $orders = OrderDB::get_orders($_SESSION['userId']);
+}else{
+  $orders = false;
+}
 ?>
       <!--  orders -->
       <div class="contact">
@@ -47,6 +51,7 @@ error_reporting(E_ALL);
 						}
 					  ?>
                   </table>
+				  <a class="read_more" href="account.php">Return</a><br><br>
                </div>
             </div>
         </div>
