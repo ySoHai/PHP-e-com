@@ -25,27 +25,22 @@
 					 <?php
 					 $price = 0;
 						foreach ($order_items as $order_item) {
-							$product = ProductDB::get_product_by_id($order_item->getProductId);
-							$price = $order_item->getAmount * $product->getPrice;
+							$product = ProductDB::get_product_by_id($order_item->getProductId());
+							$price = $order_item->getAmount() * $product->getPrice();
+							$total += $price;
 							echo '<tr>
-							<td style="vertical-align: middle;>'. $order_item->getOrderId .'</td>
-							<td style="vertical-align: middle;>'. $order_item->getProductId .'</td>
-							<td style="vertical-align: middle;> $'. $order_item->getAmount .'</td>
+							<td style="vertical-align: middle;>'. $order_item->getOrderId() .'</td>
+							<td style="vertical-align: middle;>'. $order_item->getProductId() .'</td>
+							<td style="vertical-align: middle;> $'. $order_item->getAmount() .'</td>
 							<td style="vertical-align: middle;> $'. $price .'</td>
 							</tr >';
 						}
 					 ?>
 					 	<tr class="thead-dark">
-					       <th scope="col" style="vertical-align: middle;">SubTotal</th>
-						   <th scope="col" style="vertical-align: middle;"></th>
-						   <th scope="col" style="vertical-align: middle;"></th>
-					       <th scope="col" style="vertical-align: middle;">$<?php echo $order_item->getTotal ?></th>
-					    </tr>
-					    <tr class="thead-dark">
 					       <th scope="col" style="vertical-align: middle;">Total</th>
 						   <th scope="col" style="vertical-align: middle;"></th>
 						   <th scope="col" style="vertical-align: middle;"></th>
-					       <th scope="col" style="vertical-align: middle;">$<?php echo OrderDB::get_grand_total($order_item->getOrderId) ?></th>
+					       <th scope="col" style="vertical-align: middle;">$<?php echo $total ?></th>
 					    </tr>
                   </table>
                </div>
