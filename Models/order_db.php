@@ -78,13 +78,13 @@ class OrderDB {
             $statement = $db->prepare($query);
             $statement->bindValue(':userID', $userID);
             $statement->execute();
-            $result = $statement->fetchAll();
+            $result = $statement->fetch();
             $statement->closeCursor();
             
-            if ($result == null ) {
-                return false;
-            } else {
+            if ($result) {
                 return true;
+            } else {
+                return false;
             }
             
         } catch (PDOException $e) {
