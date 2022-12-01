@@ -81,7 +81,7 @@ class OrderDB {
             $result = $statement->fetch();
             $statement->closeCursor();
             
-            if(empty($result)){
+            if(!empty($result)){
                 return true;
             } else {
                 return false;
