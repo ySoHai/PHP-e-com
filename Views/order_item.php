@@ -21,23 +21,22 @@ error_reporting(E_ALL);
                   <table class="table table-hover table-striped table-dark">
                      <tr class="thead-dark">
                         <th scope="col">Order ID</th>
-                        <th scope="col">Product ID</th>
-						<th scope="col">Quantity</th>
+                        <th scope="col">Product Name</th>
+						      <th scope="col">Quantity</th>
                         <th scope="col">Price</th>
-                        <th scope="col"></th>
                      </tr>
 					 <?php
 					 $price = 0;
 					 $total = 0;
 						foreach ($order_items as $order_item) {
-							$product = ProductDB::get_product_by_id($order_item->getProductId());
-							$price = $order_item->getAmount() * $product->getPrice();
+							$product = ProductDB::get_product_by_id($order_item->getProductID());
+							$price = $order_item->getTotal() * $order_item->getAmount();
 							$total += $price;
 							echo '<tr>
-							<td style="vertical-align: middle;>'. $order_item->getOrderId() .'</td>
-							<td style="vertical-align: middle;>'. $order_item->getProductId() .'</td>
-							<td style="vertical-align: middle;> $'. $order_item->getAmount() .'</td>
-							<td style="vertical-align: middle;> $'. $price .'</td>
+							<td style="vertical-align: middle;">'. $order_item->getOrderID() .'</td>
+							<td style="vertical-align: middle;">'. $product->getName() .'</td>
+							<td style="vertical-align: middle;">'. $order_item->getAmount() .'</td>
+							<td style="vertical-align: middle;"> $'. $order_item->getTotal() .'</td>
 							</tr >';
 						}
 					 ?>

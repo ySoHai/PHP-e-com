@@ -2,21 +2,21 @@
 class OrderItem{
     private int $orderId;
     private int $productId;
-    private float $amount;
+    private int $amount;
     private float $total;
 
-    public function __construct(int $orderId, int $productId, float $amount,float $total) {
+    public function __construct(int $orderId, int $productId, int $amount,float $total) {
         $this->orderId = $orderId;
         $this->productId = $productId;
         $this->amount = $amount;
         $this->total = $total;
 	}
 
-    public function getOrderId() {
+    public function getOrderID() {
         return $this->orderId;
     }
 
-    public function getProductId() {
+    public function getProductID() {
         return $this->productId;
     }
 

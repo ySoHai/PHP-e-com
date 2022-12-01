@@ -138,7 +138,7 @@ class OrderDB {
             $statement->bindValue(':orderID', $orderID);
             $statement->bindValue(':productID', $productID);
             $statement->bindValue(':amount', $amount);
-            $statement->bindValue(':price', $price);
+            $statement->bindValue(':total', $price);
             $statement->execute();
             $statement->closeCursor();
             
