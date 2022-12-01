@@ -24,6 +24,7 @@
                      </tr>
 					 <?php
 					 $price = 0;
+					 $total = 0;
 						foreach ($order_items as $order_item) {
 							$product = ProductDB::get_product_by_id($order_item->getProductId());
 							$price = $order_item->getAmount() * $product->getPrice();
