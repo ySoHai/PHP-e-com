@@ -27,20 +27,22 @@ error_reporting(E_ALL);
                         <th scope="col">Order ID</th>
                         <th scope="col">Ordered Date</th>
                         <th scope="col">Total</th>
+                        <th scope="col">Order Link</th>
                      </tr>
                      <?php
 						if ($orders == false) {
 							echo '<tr>
-                           <td colspan="3">NO ORDERS</td>
+                           <td colspan="3" style="vertical-align: middle; >NO ORDERS</td>
                            </tr>';
 						}
 						else {
 							foreach ($orders as $order) {
 							echo '<tr>
-                           <td>'. $order->getOrderId .'</td>
-                           <td>'. $order->getOrderDate .'</td>
-                           <td> $'. $order->getGrandTotal .'</td>
-                           </tr>';
+                           <td style="vertical-align: middle;>'. $order->getOrderId .'</td>
+                           <td style="vertical-align: middle;>'. $order->getOrderDate .'</td>
+                           <td style="vertical-align: middle;> $'. $order->getGrandTotal .'</td>
+                           <td style="vertical-align: middle;><a href="order_item.php?orderID='. $order->getOrderId .'">View Order</a></td>
+                           </tr >';
 							}
 						}
 					  ?>
