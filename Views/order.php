@@ -48,7 +48,9 @@ error_reporting(E_ALL);
 					  ?>
                   </table>
                   <?php echo OrderDB::orders_exist($_SESSION['userId']);
-                        echo OrderDB::test($_SESSION['userId']);
+                        foreach($OrderDB::test($_SESSION['userId'])['data'] as $result) {
+                           echo $result['type'], '<br>';
+                       }
                   ?>
                </div>
             </div>
