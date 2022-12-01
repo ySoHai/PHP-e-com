@@ -71,24 +71,24 @@ class OrderDB {
 
     public static function orders_exist($userID) {
         $db = Database::getDB();
-        $query = 'SELECT *
+        $query = 'SELECT userID
                   FROM orders
                   WHERE userID = :userID';
         try {
             $statement = $db->prepare($query);
             $statement->bindValue(':userID', $userID);
             $statement->execute();
-            $result = $statement->fetchall();
+            $result = $statement->fetch();
             $statement->closeCursor();
             
-            if(!empty($result)&&in_array($userID, $result)){
+            if(empty($result)){
                 return true;
             } else {
                 return false;
             }
             
         } catch (PDOException $e) {
-            return false;
+            Database::displayError($e->getMessage());
         }
     }
     
@@ -108,27 +108,6 @@ class OrderDB {
             
         } catch (PDOException $e) {
             Database::displayError($e->getMessage());
-        }
-    }
-
-    public static function test($userID) {
-        $db = Database::getDB();
-        $query = 'SELECT *
-                  FROM orders
-                  WHERE userID = :userID';
-        try {
-            $statement = $db->prepare($query);
-            $statement->bindValue(':userID', $userID);
-            $statement->execute();
-            $result = $statement->fetchall();
-            $statement->closeCursor();
-            
-        
-            return $result;
-
-            
-        } catch (PDOException $e) {
-            return false;
         }
     }
 
