@@ -78,7 +78,7 @@ class OrderDB {
             $statement = $db->prepare($query);
             $statement->bindValue(':userID', $userID);
             $statement->execute();
-            $result = $statement->fetch();
+            $result = $statement->fetchall();
             $statement->closeCursor();
             
             if(!empty($result)&&in_array($userID, $result)){
@@ -108,6 +108,27 @@ class OrderDB {
             
         } catch (PDOException $e) {
             Database::displayError($e->getMessage());
+        }
+    }
+
+    public static function test($userID) {
+        $db = Database::getDB();
+        $query = 'SELECT *
+                  FROM orders
+                  WHERE userID = :userID';
+        try {
+            $statement = $db->prepare($query);
+            $statement->bindValue(':userID', $userID);
+            $statement->execute();
+            $result = $statement->fetchall();
+            $statement->closeCursor();
+            
+        
+            return $result;
+
+            
+        } catch (PDOException $e) {
+            return false;
         }
     }
 
