@@ -38,10 +38,10 @@ error_reporting(E_ALL);
 						else {
 							foreach ($orders as $order) {
 							echo '<tr>
-                           <td style="vertical-align: middle;>'. $order->getOrderId() .'</td>
-                           <td style="vertical-align: middle;>'. $order->getOrderDate() .'</td>
-                           <td style="vertical-align: middle;> $'. $order->getGrandTotal() .'</td>
-                           <td style="vertical-align: middle;><a href="order_item.php?orderID='. $order->getOrderId() .'">View Order</a></td>
+                           <td style="vertical-align: middle;">'. $order->getOrderId() .'</td>
+                           <td style="vertical-align: middle;">'. $order->getOrderDate() .'</td>
+                           <td style="vertical-align: middle;"> $'. $order->getGrandTotal() .'</td>
+                           <td style="vertical-align: middle;"><a class="read_more" href="order_item.php?orderID='. $order->getOrderId() .'">View Order</a></td>
                            </tr >';
 							}
 						}
