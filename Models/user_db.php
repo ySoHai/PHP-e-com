@@ -1,5 +1,6 @@
 <?php
-    function validateLogin($email, $password) {
+class UserDB {
+    public static function validateLogin($email, $password) {
 		if(empty($email)||empty($password))  return false;
 		
         $db = Database::getDB();
@@ -7,7 +8,7 @@
                     WHERE email = :email';
         try {
             $statement = $db->prepare($query);
-            $statement->bindValue(':email', $email);
+            $statement->bindValue(':email', strtolower($email));
             $statement->execute();
             $pword = $statement->fetch();
             $statement->closeCursor();
@@ -19,37 +20,12 @@
             }
             
         } catch (PDOException $e) {
-            Database::displayError($e->getMessage());
-        }
-        
-    }
-	
-	function validateEmail($email) {
-		if(empty($email)) return false;
-		
-        $db = Database::getDB();
-        $query = 'SELECT email FROM users
-                    WHERE email = :email';
-        try {
-            $statement = $db->prepare($query);
-            $statement->bindValue(':email', $email);
-            $statement->execute();
-            $emails = $statement->fetch();
-            $statement->closeCursor();
-            
-            if(!empty($emails)){
-                return false;
-            } else {
-                return true;
-            }
-            
-        } catch (PDOException $e) {
-            Database::displayError($e->getMessage());
+            return false;
         }
         
     }
     
-    function registerUser($email,$pnum,$address,$fname,$lname,$password) {
+    public static function registerUser($email,$pnum,$address,$fname,$lname,$password) {
         $db = Database::getDB();
         $query = 'INSERT into users 
                     (email,phone,address,name_first,name_last,password)
@@ -57,7 +33,7 @@
                     (:email,:phone,:address,:fname,:lname,:password)';
         try {
             $statement = $db->prepare($query);
-            $statement->bindValue(':email', $email);
+            $statement->bindValue(':email', strtolower($email));
             $statement->bindValue(':phone', $pnum);
             $statement->bindValue(':address', $address);
             $statement->bindValue(':fname', $fname);
@@ -65,13 +41,14 @@
             $statement->bindValue(':password', $password);
             $statement->execute();
             $statement->closeCursor();
+			return true;
             
         } catch (PDOException $e) {
-            Database::displayError($e->getMessage());
+            return false;
         }
     }
 
-    function getUserId($email) {
+    public static function getUserId($email) {
         $db = Database::getDB();
         $query = 'SELECT userID FROM users
                 WHERE email = :email';
@@ -87,5 +64,5 @@
             Database::displayError($e->getMessage());
         }
     }
-
+}
 ?>
