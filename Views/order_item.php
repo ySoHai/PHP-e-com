@@ -3,7 +3,8 @@
    require_once('../Models/database.php');
    require_once('../Models/order_item.php');
    require_once('../Models/order_db.php');
-
+   require_once('../Models/product_db.php');
+   require_once('../Models/product.php');
    $order_items = OrderDB::get_order_items($_GET['orderID']);
 ?>
       <!--  orders -->
