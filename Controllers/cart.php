@@ -30,7 +30,7 @@ else if ($action=='add'&&isset($_GET['item'])) {
 }
 else if ($action=='order') {
 	$date = date("Y/m/d");
-	OrderDB::add_order($_SESSION['userId'], $date, number_format($_GET['grand_total'], 2));
+	OrderDB::add_order($_SESSION['userId'], $date, $_GET['grand_total']);
 	
 	header('Location: ../Views/account.php');
 }
