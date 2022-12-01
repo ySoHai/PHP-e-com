@@ -71,7 +71,7 @@ class OrderDB {
 
     public static function orders_exist($userID) {
         $db = Database::getDB();
-        $query = 'SELECT orderID
+        $query = 'SELECT userID
                   FROM orders
                   WHERE userID = :userID';
         try {
