@@ -81,10 +81,10 @@ class OrderDB {
             $result = $statement->fetchAll();
             $statement->closeCursor();
             
-            if ($result['orderID'] > 0) {
-                return true;
-            } else {
+            if ($result == null ) {
                 return false;
+            } else {
+                return true;
             }
             
         } catch (PDOException $e) {
