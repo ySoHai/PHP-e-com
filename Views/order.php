@@ -32,7 +32,7 @@ error_reporting(E_ALL);
                      <?php
 						if ($orders == false) {
 							echo '<tr>
-                           <td colspan="3" style="vertical-align: middle; >NO ORDERS</td>
+                           <td colspan="4" style="vertical-align: middle;">NO ORDERS</td>
                            </tr>';
 						}
 						else {
