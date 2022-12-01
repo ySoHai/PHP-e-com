@@ -2,11 +2,11 @@
 class Order{
     private int $userId;
     private int $orderId;
-    private DateTime $orderDate;
+    private string $orderDate;
     private float $grandTotal;
     //private array $array =[];
 
-    public function __construct(int $orderId, int $userId, DateTime $order_date,float $grandTotal) {
+    public function __construct(int $orderId, int $userId, string $order_date,float $grandTotal) {
         $this->orderId = $orderId;
         $this->userId = $userId;
         $this->orderDate = $order_date;
