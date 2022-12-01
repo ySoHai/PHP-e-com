@@ -16,7 +16,7 @@ error_reporting(E_ALL);
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>My Order</h2>
+                     <h2>Order #<?php echo $order_items['1']->getOrderId()?></h2>
                   </div>
                   <table class="table table-hover table-striped table-dark">
                      <tr class="thead-dark">
