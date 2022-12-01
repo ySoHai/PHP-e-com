@@ -34,7 +34,7 @@ $user = new User((int)$_SESSION['userId']);
                                        <b>First Name:</b> <?php echo $user->getFName(); ?> <br>
                                        <b>Last Name:</b> <?php echo $user->getLName(); ?> <br>
                                        <?php if($user->getPhone()!= ''){
-                                                echo '<b>Phone Number:</b>' .$user->getPhone(). '<br>';
+                                                echo '<b>Phone Number:</b> ' .$user->getPhone(). '<br>';
                                              }?>
                                        <b>Address:</b> <?php echo $user->getAdd(); ?> <br>
                                     </p>
