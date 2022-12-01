@@ -49,6 +49,25 @@ class OrderDB {
             return false;
         }
     }
+    
+    public static function add_order($userID, $orderDate, $grandTotal) {
+        $db = Database::getDB();
+        $query = 'INSERT into orders 
+                    (userID,order_date,grand_total)
+                  VALUES
+                    (:userID,:order_date,:grand_total)';
+        try {
+            $statement = $db->prepare($query);
+            $statement->bindValue(':userID', $userID);
+            $statement->bindValue(':order_date', $orderDate);
+            $statement->bindValue(':grand_total', $grandTotal);
+            $statement->execute();
+            $statement->closeCursor();
+            
+        } catch (PDOException $e) {
+            Database::displayError($e->getMessage());
+        }
+    }
 
 }
 ?>

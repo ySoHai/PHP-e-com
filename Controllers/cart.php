@@ -8,6 +8,7 @@ $action = $_GET['action'];
 require_once('../Models/database.php');
 require_once('../Models/product.php');
 require_once('../Models/product_db.php');
+require_once('../Models/order_db.php');
 
 if ($action=='remove'&&isset($_GET['index'])) {
 	$_SESSION['cart'][$_GET['index']]=[];
@@ -26,6 +27,12 @@ else if ($action=='add'&&isset($_GET['item'])) {
 		}
 	}
 	$_SESSION['cart'][]=array($_GET['item'],$_GET['quantity']);
+}
+else if ($action=='order') {
+	$date = date("Y/m/d");
+	OrderDB::add_order($_SESSION['userId'], $date, number_format($_GET['grand_total'], 2));
+	
+	header('Location: ../Views/account.php');
 }
 
 header('Location: ../Views/cart.php');
