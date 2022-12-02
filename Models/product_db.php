@@ -185,25 +185,15 @@ class ProductDB {
        }
     }
     
-    public static function updateProduct($product) {
+    public static function updateQuantity($product) {
         $db = Database::getDB();
         $query = 'UPDATE products
-                  SET name = :name, description = :description,
-                      price = :price, quantity = :quantity,
-                      quality_new = :quality_new, ship_days = :ship_days,
-                      categoryID = :category_id, sellerID = :seller_id
+                  SET quantity = :quantity
                   WHERE productID = :product_id';
         try {
             $statement = $db->prepare($query);
             $statement->bindValue(':product_id', $product->getID());
-            $statement->bindValue(':name', $product->getName());
-            $statement->bindValue(':description', $product->getDescription());
-            $statement->bindValue(':price', $product->getPrice());
             $statement->bindValue(':quantity', $product->getQuantity());
-            $statement->bindValue(':quality_new', $product->getQuality());
-            $statement->bindValue(':ship_days', $product->getShip_days());
-            $statement->bindValue(':category_id', $product->getCategory());
-            $statement->bindValue(':seller_id', $product->getUser());
             $statement->execute();
             $statement->closeCursor();
             
