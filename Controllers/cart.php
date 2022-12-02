@@ -29,7 +29,7 @@ else if ($action=='add'&&isset($_GET['item'])) {
 	$_SESSION['cart'][]=array($_GET['item'],$_GET['quantity']);
 }
 else if ($action=='order') {
-	$date = date("Y/m/d");
+	$date = date("Y/m/d h:i:s");
 	OrderDB::add_order($_SESSION['userId'], $date, $_GET['grand_total']);
 	$order = OrderDB::get_last_order();
 	
