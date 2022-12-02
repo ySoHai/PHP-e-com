@@ -23,12 +23,17 @@ else if ($action=='add'&&isset($_GET['item'])) {
 			}
 			else $_SESSION['cart'][$index][1]+=$_GET['quantity'];
 			header('Location: ../Views/cart.php');
-			die();
+			die('Something went very wrong :(');
 		}
 	}
 	$_SESSION['cart'][]=array($_GET['item'],$_GET['quantity']);
 }
 else if ($action=='order') {
+	if(!isset($_SESSION['userId'])){
+		header("Location: ../Views/login.php");
+		die('Something went very wrong :(');
+	}
+	
 	$date = date("Y/m/d h:i:s");
 	OrderDB::add_order($_SESSION['userId'], $date, $_GET['grand_total']);
 	$order = OrderDB::get_last_order();
@@ -43,7 +48,9 @@ else if ($action=='order') {
 	unset($_SESSION['cart']);
 	
 	header('Location: ../Views/account.php');
+	die('Something went very wrong :(');
 }
 
 header('Location: ../Views/cart.php');
+die('Something went very wrong :(');
 ?>

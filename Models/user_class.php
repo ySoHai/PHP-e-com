@@ -20,9 +20,9 @@ class User {
         return $this->id;
     }
 
-    //public function setUserID(int $value) {
-    //    $this->id = $value;
-    //}
+    public function setUserID(int $value) {
+        $this->id = $value;
+    }
     
     public function getEmail() {
         return $this->email;

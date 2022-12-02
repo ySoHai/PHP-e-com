@@ -1,5 +1,4 @@
 <?php
-
 require_once('../Models/database.php');
 require_once('../Models/user_db.php');
 
@@ -11,6 +10,7 @@ if (!empty($_POST['phoneNumber'])&&!empty($_POST['address'])&&!empty($_POST['fir
 	 }
 	$_SESSION['userId'] = UserDB::getUserId($_POST['email']);
 	header('Location: ../Views/account.php');
+	die('Something went very wrong :(');
 }
 else {
 	$error_signup = true;

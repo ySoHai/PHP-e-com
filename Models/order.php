@@ -4,7 +4,6 @@ class Order{
     private int $orderId;
     private string $orderDate;
     private float $grandTotal;
-    //private array $array =[];
 
     public function __construct(int $orderId_, int $userId_, string $orderDate_, float $grandTotal_) {
         $this->orderId = $orderId_;
@@ -42,12 +41,6 @@ class Order{
 
     public function setGrandTotal(float $value) {
         $this->grandTotal = $value;
-    }
-
-    
+    }   
 }
-
-
-
-
 ?>

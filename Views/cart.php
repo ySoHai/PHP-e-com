@@ -44,20 +44,20 @@ $date = date("Y/m/d");
 							$price += $product->getPrice()*$item[1];
 							$total += $item[1];
 							echo '<tr>
-							   <td style="vertical-align: middle;">'. $product->getName() .'</td>
-							   <td style="vertical-align: middle;">'. $item[1] .'</td>
-							   <td style="vertical-align: middle;">'. date('Y-m-d', strtotime($date. ' + '.$product->getShip_days().' days')).'</td>
-							   <td style="vertical-align: middle;">$'. $product->getPrice()*$item[1] .'</td>
-							   <td style="vertical-align: middle;"><a class="read_more" style="background-color: transparent; border: #48ca95 solid 2px; color: #48ca95!important;" href="../Controllers/cart.php?action=remove&index='.$index.'">Remove</a></td>
+								   <td style="vertical-align: middle;">'. $product->getName() .'</td>
+								   <td style="vertical-align: middle;">'. $item[1] .'</td>
+								   <td style="vertical-align: middle;">'. date('Y-m-d', strtotime($date. ' + '.$product->getShip_days().' days')).'</td>
+								   <td style="vertical-align: middle;">$'. $product->getPrice()*$item[1] .'</td>
+								   <td style="vertical-align: middle;"><a class="read_more" style="background-color: transparent; border: #48ca95 solid 2px; color: #48ca95!important;" href="../Controllers/cart.php?action=remove&index='.$index.'">Remove</a></td>
 							   </tr>';
 						}
 						
 						echo '<tr class="thead-dark">
-					  			<th scope="col" style="vertical-align: middle;">Total</th>
-						   <th scope="col" style="vertical-align: middle;">'.$total.'</th>
-						   <th scope="col" style="vertical-align: middle;"></th>
-					       <th scope="col" style="vertical-align: middle;">$'.$price.'</th>
-					       <th scope="col" style="vertical-align: middle;"><a class="read_more" href="../Controllers/cart.php?action=order&grand_total='.$price.'">Place order</a></th>
+								<th scope="col" style="vertical-align: middle;">Total</th>
+							    <th scope="col" style="vertical-align: middle;">'.$total.'</th>
+							    <th scope="col" style="vertical-align: middle;"></th>
+							    <th scope="col" style="vertical-align: middle;">$'.$price.'</th>
+							    <th scope="col" style="vertical-align: middle;"><a class="read_more" href="../Controllers/cart.php?action=order&grand_total='.$price.'">Place order</a></th>
 					       </tr>';
 					 }
 					?>

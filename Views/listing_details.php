@@ -16,7 +16,7 @@
                      <b>Description: </b><?php echo $product->getDescription(); ?><br>
 					 <b>Quantity: </b><?php echo $product->getQuantity() . ' available'; ?><br>
                      <b>Expected ship date: </b><?php echo date('Y-m-d', strtotime($date. ' + '.$product->getShip_days().' days')); ?></p>
-                     <a class="read_more" style="background-color: transparent; border: #48ca95 solid 2px; color: #48ca95!important;" href="listing.php">Back to My Listings</a>
+                     <a class="read_more" href="listing.php">Return</a>
                   </div>
                </div>
                <div class="col-md-7">

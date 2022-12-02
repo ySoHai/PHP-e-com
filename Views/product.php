@@ -1,13 +1,15 @@
 <?php
-	require_once('header.php');
-	require_once('../Models/database.php');
-	require_once('../Models/product.php');
-	require_once('../Models/product_db.php');
-	require_once('../Models/category.php');
-	require_once('../Models/category_db.php');
-	if (isset($_GET["cat"])) $products = ProductDB::get_product_by_category($_GET["cat"]);
-	else $products = ProductDB::get_active_products();
-	$cats = CategoryDB::get_categories();
+require_once('header.php');
+require_once('../Models/database.php');
+require_once('../Models/product.php');
+require_once('../Models/product_db.php');
+require_once('../Models/category.php');
+require_once('../Models/category_db.php');
+
+if (isset($_GET["cat"])) $products = ProductDB::get_product_by_category($_GET["cat"]);
+else $products = ProductDB::get_active_products();
+
+$cats = CategoryDB::get_categories();
 ?>
       <!-- products -->
       <div  class="products" style="margin-top: 0px;">

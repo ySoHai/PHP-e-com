@@ -3,9 +3,7 @@ class Category {
 	private int $id;
     private string $description;
 	
-    public function __construct(
-        int $id_, string $description_
-    ) {
+    public function __construct(int $id_, string $description_) {
 		$this->id = $id_;
 		$this->description = $description_;
 	}

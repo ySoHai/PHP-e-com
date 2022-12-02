@@ -14,12 +14,14 @@ class OrderDB {
             $statement->closeCursor();
             
             $orders = [];
+			
             foreach ($rows as $row) {
                 $orders[] = new Order($row['orderID'],
-                                            $row['userID'],
-                                            $row['order_date'],
-                                            $row['grand_total']);
+									$row['userID'],
+									$row['order_date'],
+									$row['grand_total']);
             }
+			
             return $orders;
         } catch (PDOException $e) {
             Database::displayError($e->getMessage());

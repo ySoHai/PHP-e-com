@@ -13,10 +13,12 @@ class CategoryDB {
             $statement->closeCursor();
             
             $categories = [];
+			
             foreach ($rows as $row) {
                 $categories[] = new Category($row['categoryID'],
                                              $row['description']);
             }
+			
             return $categories;
         } catch (PDOException $e) {
             Database::displayError($e->getMessage());

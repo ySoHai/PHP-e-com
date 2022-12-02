@@ -1,5 +1,7 @@
 <?php 
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+   session_start();
+}
 
 if(!isset($_SESSION['userId'])){
 	header("Location: ./login.php");
@@ -10,7 +12,6 @@ require_once('header.php');
 require_once('../Models/database.php');
 require_once('../Models/order.php');
 require_once('../Models/order_db.php');
-//require_once('../Models/order_item.php');
 
 if(OrderDB::orders_exist($_SESSION['userId'])){
   $orders = OrderDB::get_orders($_SESSION['userId']);
